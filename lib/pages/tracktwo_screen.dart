@@ -13,7 +13,7 @@ class TrackTwoScreenState extends State<TrackTwoScreen> {
   @override
   Widget build(BuildContext context) {
     return new ListView.builder(
-      itemCount: dummyData.length,
+      itemCount: dummyData2.length,
       itemBuilder: (context, i) => new Column(
         children: <Widget>[
           new Divider(
@@ -23,7 +23,7 @@ class TrackTwoScreenState extends State<TrackTwoScreen> {
             leading: new CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
-              backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
+              backgroundImage: new NetworkImage(dummyData2[i].avatarUrl),
             ),
             title: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,7 +31,7 @@ class TrackTwoScreenState extends State<TrackTwoScreen> {
                 new Flexible(
                   child: new Container(
                     child: new Text(
-                      dummyData[i].title,
+                      dummyData2[i].title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: new TextStyle(fontWeight: FontWeight.bold),
@@ -47,7 +47,7 @@ class TrackTwoScreenState extends State<TrackTwoScreen> {
                 child: new Row(
                   children: <Widget>[
                     new Text(
-                      dummyData[i].name,
+                      dummyData2[i].name,
                       style:
                       new TextStyle(color: Colors.grey, fontSize: 15.0),
                     ),
@@ -55,7 +55,7 @@ class TrackTwoScreenState extends State<TrackTwoScreen> {
                         padding:
                         const EdgeInsets.symmetric(horizontal: 5.0)),
                     new Text(
-                      dummyData[i].time,
+                      dummyData2[i].time,
                       style:
                       new TextStyle(color: Colors.grey, fontSize: 14.0),
                     ),
@@ -71,7 +71,7 @@ class TrackTwoScreenState extends State<TrackTwoScreen> {
 
   showDetailPage(BuildContext context, int i) {
     Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new SessionDetailPage(dummyData[i]);
+      return new SessionDetailPage(dummyData2[i]);
     }));
   }
 }
