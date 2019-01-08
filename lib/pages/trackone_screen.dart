@@ -1,4 +1,5 @@
 import 'package:droidknights/models/track_schedule.dart';
+import 'package:droidknights/pages/session_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class TrackOneScreen extends StatefulWidget {
@@ -59,10 +60,18 @@ class TrackOneScreenState extends State<TrackOneScreen> {
                               new TextStyle(color: Colors.grey, fontSize: 14.0),
                         ),
                       ],
-                    )),
-              )
+                    )
+                ),
+              onTap: () => showDetailPage(context, i),
+              ),
             ],
           ),
     );
+  }
+
+  showDetailPage(BuildContext context, int i) {
+    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+      return new SessionDetailPage(dummyData[i]);
+    }));
   }
 }
