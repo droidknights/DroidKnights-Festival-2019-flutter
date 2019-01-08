@@ -16,7 +16,7 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(length: 3, vsync: this, initialIndex: 1);
+    _tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
   }
 
   @override
