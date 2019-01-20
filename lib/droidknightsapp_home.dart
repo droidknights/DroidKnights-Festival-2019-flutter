@@ -1,4 +1,5 @@
 import 'package:droidknights/models/Constants.dart';
+import 'package:droidknights/pages/generate_qrcode.dart';
 import 'package:droidknights/pages/trackone_screen.dart';
 import 'package:droidknights/pages/tracktwo_screen.dart';
 import 'package:flutter/material.dart';
@@ -60,14 +61,14 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   
   void _select(String string) {
     if (string == Constants.QRcode) {
-      print('QRcode 나와랏');
+      showQRcodePage(context);
     }
     
   }
 
-  showQRcodePage(BuildContext context, int i) {
+  showQRcodePage(BuildContext context) {
     Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new SessionDetailPage(dummyData[i]);
+      return new GenerateScreen();
     }));
   }
 }
