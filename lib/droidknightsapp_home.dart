@@ -1,3 +1,4 @@
+import 'package:droidknights/models/Constants.dart';
 import 'package:droidknights/pages/trackone_screen.dart';
 import 'package:droidknights/pages/tracktwo_screen.dart';
 import 'package:flutter/material.dart';
@@ -34,10 +35,17 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
             ]
         ),
         actions: <Widget>[
-          new Icon(Icons.search),
-          new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
-          new Icon(Icons.more_vert),
-          new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0))
+          PopupMenuButton<String>(
+            onSelected: _select,
+            itemBuilder: (BuildContext context) {
+              return Constants.choices.map((String choice) {
+                return PopupMenuItem<String> (
+                  value : choice,
+                  child : Text(choice)
+                );
+              }).toList();
+            },
+          ),
         ],
       ),
       body: new TabBarView(
@@ -47,14 +55,19 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
             new TrackTwoScreen(),
           ]
       ),
-      /*floatingActionButton: new FloatingActionButton(
-        backgroundColor: Theme.of(context).accentColor,
-        child: new Icon(
-          Icons.message,
-          color: Colors.black,
-        ),
-        onPressed: ()=> print("open chats"),
-      ),*/
     );
+  }
+  
+  void _select(String string) {
+    if (string == Constants.QRcode) {
+      print('QRcode 나와랏');
+    }
+    
+  }
+
+  showQRcodePage(BuildContext context, int i) {
+    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+      return new SessionDetailPage(dummyData[i]);
+    }));
   }
 }
