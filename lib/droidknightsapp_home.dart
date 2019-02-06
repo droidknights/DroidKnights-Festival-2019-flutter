@@ -1,7 +1,6 @@
 import 'package:droidknights/models/Constants.dart';
 import 'package:droidknights/pages/generate_qrcode.dart';
 import 'package:droidknights/pages/scan_qrcode.dart';
-import 'package:droidknights/pages/schedule_page.dart';
 import 'package:droidknights/pages/trackone_screen.dart';
 import 'package:droidknights/pages/tracktwo_screen.dart';
 import 'package:droidknights/placeholder_widget.dart';
@@ -13,8 +12,9 @@ class DroidknightsAppHome extends StatefulWidget {
 }
 
 class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   TabController _tabController;
+  TabController _profile_tabController;
   int _currentIndex = 1;
   List<Widget> _appbar = [];
   List<Widget> _children = [];
@@ -23,11 +23,12 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   void initState() {
     super.initState();
     _tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
-    _appbar.addAll([null, scheduleAppbar(), null]);
+    _profile_tabController = new TabController(length: 4, vsync: this, initialIndex: 0);
+    _appbar.addAll([null, scheduleAppbar(), profileAppbar()]);
     _children.addAll([
       PlaceholderWidget(Colors.deepOrange),
       scheduleBody(),
-      PlaceholderWidget(Colors.green)
+      profileBody()
     ]);
   }
 
@@ -114,6 +115,29 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
       body: new TabBarView(controller: _tabController, children: <Widget>[
         new TrackOneScreen(),
         new TrackTwoScreen(),
+      ]),
+    );
+  }
+
+  Widget profileAppbar() {
+    return new TabBar(
+        controller: _profile_tabController,
+        indicatorColor: Colors.white,
+        tabs: <Widget>[
+          new Tab(
+            text: "Level",
+          ),
+          new Tab(text: "QRCode"),
+          new Tab(text: "Scan"),
+        ]);
+  }
+
+  Widget profileBody() {
+    return new Scaffold(
+      body: new TabBarView(controller: _profile_tabController, children: <Widget>[
+        PlaceholderWidget(Colors.greenAccent),
+        new GenerateScreen(),
+        new ScanScreen(),
       ]),
     );
   }

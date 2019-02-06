@@ -20,9 +20,6 @@ class _ScanState extends State<ScanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: new AppBar(
-          title: new Text('QR Code Scanner'),
-        ),
         body: new Center(
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,

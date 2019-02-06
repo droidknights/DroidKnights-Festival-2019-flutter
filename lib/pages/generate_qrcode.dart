@@ -28,9 +28,6 @@ class GenerateScreenState extends State<GenerateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('QR Code Generator'),
-      ),
       body: _contentWidget(),
     );
   }

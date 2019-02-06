@@ -5,7 +5,7 @@ class Constants {
 
   static const List<String> choices = <String> [
     Setting,
-    MakeQR,
-    ReadQR
+    //MakeQR,
+    //ReadQR
   ];
 }
