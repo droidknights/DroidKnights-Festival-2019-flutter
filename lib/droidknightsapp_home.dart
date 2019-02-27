@@ -15,7 +15,7 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     with TickerProviderStateMixin {
   TabController _tabController;
   TabController _profile_tabController;
-  int _currentIndex = 1;
+  int _currentIndex = 0;
   List<Widget> _appbar = [];
   List<Widget> _children = [];
 
@@ -23,12 +23,11 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   void initState() {
     super.initState();
     _tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
-    _profile_tabController = new TabController(length: 4, vsync: this, initialIndex: 0);
-    _appbar.addAll([null, scheduleAppbar(), profileAppbar()]);
+    _profile_tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
+    _appbar.addAll([null, scheduleAppbar()]);
     _children.addAll([
       PlaceholderWidget(Colors.deepOrange),
-      scheduleBody(),
-      profileBody()
+      scheduleBody()
     ]);
   }
 
@@ -37,17 +36,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     return new Scaffold(
         appBar: new AppBar(
           title: new Text("DroidKnights"),
-          actions: <Widget>[
-            PopupMenuButton<String>(
-              onSelected: _select,
-              itemBuilder: (BuildContext context) {
-                return Constants.choices.map((String choice) {
-                  return PopupMenuItem<String>(
-                      value: choice, child: Text(choice));
-                }).toList();
-              },
-            ),
-          ],
           elevation: 0.7,
           bottom: _appbar[_currentIndex]
         ),
@@ -64,8 +52,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
               icon: new Icon(Icons.schedule),
               title: new Text('Schedule'),
             ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person), title: Text('Profile'))
           ],
         ),
         body: _children[_currentIndex]
