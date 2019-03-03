@@ -1,9 +1,5 @@
-import 'package:droidknights/models/Constants.dart';
-import 'package:droidknights/pages/generate_qrcode.dart';
-import 'package:droidknights/pages/scan_qrcode.dart';
 import 'package:droidknights/pages/trackone_screen.dart';
 import 'package:droidknights/pages/tracktwo_screen.dart';
-import 'package:droidknights/placeholder_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:droidknights/pages/info_page.dart';
 
@@ -15,7 +11,6 @@ class DroidknightsAppHome extends StatefulWidget {
 class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     with TickerProviderStateMixin {
   TabController _tabController;
-  TabController _profile_tabController;
   int _currentIndex = 0;
   List<Widget> _appbar = [];
   List<Widget> _children = [];
@@ -24,7 +19,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   void initState() {
     super.initState();
     _tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
-    _profile_tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
     _appbar.addAll([null, scheduleAppbar()]);
     _children.addAll([
       InfoPage(),
@@ -66,25 +60,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     });
   }
 
-  void _select(String string) {
-    if (string == Constants.MakeQR) {
-      showMakeQRcodePage(context);
-    } else if (string == Constants.ReadQR) {
-      showReadQRcodePage(context);
-    }
-  }
-
-  showMakeQRcodePage(BuildContext context) {
-    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new GenerateScreen();
-    }));
-  }
-
-  showReadQRcodePage(BuildContext context) {
-    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new ScanScreen();
-    }));
-  }
 
   Widget scheduleAppbar() {
     return new TabBar(
@@ -107,26 +82,4 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     );
   }
 
-  Widget profileAppbar() {
-    return new TabBar(
-        controller: _profile_tabController,
-        indicatorColor: Colors.white,
-        tabs: <Widget>[
-          new Tab(
-            text: "Level",
-          ),
-          new Tab(text: "QRCode"),
-          new Tab(text: "Scan"),
-        ]);
-  }
-
-  Widget profileBody() {
-    return new Scaffold(
-      body: new TabBarView(controller: _profile_tabController, children: <Widget>[
-        PlaceholderWidget(Colors.greenAccent),
-        new GenerateScreen(),
-        new ScanScreen(),
-      ]),
-    );
-  }
 }
