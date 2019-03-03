@@ -5,6 +5,7 @@ import 'package:droidknights/pages/trackone_screen.dart';
 import 'package:droidknights/pages/tracktwo_screen.dart';
 import 'package:droidknights/placeholder_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:droidknights/pages/info_page.dart';
 
 class DroidknightsAppHome extends StatefulWidget {
   @override
@@ -26,7 +27,8 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     _profile_tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
     _appbar.addAll([null, scheduleAppbar()]);
     _children.addAll([
-      PlaceholderWidget(Colors.deepOrange),
+      InfoPage(),
+      //PlaceholderWidget(Colors.deepOrange),
       scheduleBody()
     ]);
   }
