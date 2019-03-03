@@ -21,6 +21,17 @@ class InfoPageState extends State<InfoPage> {
     zoom: 14.4746,
   );
 
+  static MarkerId markerId = MarkerId('coex');
+  static Marker marker = Marker(
+    markerId: markerId,
+    position: LatLng(37.513212, 127.058595),
+    infoWindow: InfoWindow(title: 'coex', snippet: '*'),
+  );
+
+  Map<MarkerId, Marker> markers = <MarkerId, Marker>{
+    markerId:marker,
+  };
+
 
   final TextStyle _titleTextStyle = new TextStyle(
       fontSize: 19.0,
@@ -185,6 +196,7 @@ class InfoPageState extends State<InfoPage> {
                     onMapCreated: (GoogleMapController controller) {
                       _controller.complete(controller);
                     },
+                    markers: Set<Marker>.of(markers.values),
                   ),
                 ),
                 new Text(
