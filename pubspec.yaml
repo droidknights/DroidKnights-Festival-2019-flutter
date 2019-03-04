@@ -1,5 +1,5 @@
-name: droidknights
-description: A new Flutter application.
+name: droidknights2019
+description: A new Flutter application for DroidKnights Festival 2019.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -29,6 +29,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_launcher_icons: "^0.7.0"
+
+flutter_icons:
+  image_path: "assets/images/dk19_appicon.jpg"
+  android: true
+  ios: true
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -44,6 +51,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/json/
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
