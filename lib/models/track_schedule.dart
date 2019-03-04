@@ -1,3 +1,17 @@
+class ScheduleListModel{
+  final List<ScheduleModel> list;
+
+  ScheduleListModel({this.list});
+
+  factory ScheduleListModel.fromJson(List<dynamic> parsedJson) {
+    List<ScheduleModel> lists = new List<ScheduleModel>();
+    lists = parsedJson.map((i)=>ScheduleModel.fromJson(i)).toList();
+
+    return ScheduleListModel(
+        list: lists
+    );
+  }
+}
 class ScheduleModel{
   final String name;
   final String title;
@@ -7,7 +21,15 @@ class ScheduleModel{
 
   ScheduleModel({this.name, this.title, this.time, this.avatarUrl, this.contents});
 
-
+  factory ScheduleModel.fromJson(Map<String, dynamic> parsedJson){
+    return ScheduleModel(
+        name: parsedJson['name'],
+        title: parsedJson['title'],
+        time: parsedJson ['time'],
+        avatarUrl: parsedJson['avatarUrl'],
+        contents: parsedJson ['contents']
+    );
+  }
 }
 List<ScheduleModel> dummyData = [
   new ScheduleModel(
