@@ -1,10 +1,7 @@
-import 'package:droidknights/models/Constants.dart';
-import 'package:droidknights/pages/generate_qrcode.dart';
-import 'package:droidknights/pages/scan_qrcode.dart';
 import 'package:droidknights/pages/trackone_screen.dart';
 import 'package:droidknights/pages/tracktwo_screen.dart';
-import 'package:droidknights/placeholder_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:droidknights/pages/info_page.dart';
 
 class DroidknightsAppHome extends StatefulWidget {
   @override
@@ -14,8 +11,7 @@ class DroidknightsAppHome extends StatefulWidget {
 class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     with TickerProviderStateMixin {
   TabController _tabController;
-  TabController _profile_tabController;
-  int _currentIndex = 1;
+  int _currentIndex = 0;
   List<Widget> _appbar = [];
   List<Widget> _children = [];
 
@@ -23,12 +19,11 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   void initState() {
     super.initState();
     _tabController = new TabController(length: 3, vsync: this, initialIndex: 0);
-    _profile_tabController = new TabController(length: 4, vsync: this, initialIndex: 0);
-    _appbar.addAll([null, scheduleAppbar(), profileAppbar()]);
+    _appbar.addAll([null, scheduleAppbar()]);
     _children.addAll([
-      PlaceholderWidget(Colors.deepOrange),
-      scheduleBody(),
-      profileBody()
+      InfoPage(),
+      //PlaceholderWidget(Colors.deepOrange),
+      scheduleBody()
     ]);
   }
 
@@ -37,17 +32,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     return new Scaffold(
         appBar: new AppBar(
           title: new Text("DroidKnights"),
-          actions: <Widget>[
-            PopupMenuButton<String>(
-              onSelected: _select,
-              itemBuilder: (BuildContext context) {
-                return Constants.choices.map((String choice) {
-                  return PopupMenuItem<String>(
-                      value: choice, child: Text(choice));
-                }).toList();
-              },
-            ),
-          ],
           elevation: 0.7,
           bottom: _appbar[_currentIndex]
         ),
@@ -64,8 +48,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
               icon: new Icon(Icons.schedule),
               title: new Text('Schedule'),
             ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person), title: Text('Profile'))
           ],
         ),
         body: _children[_currentIndex]
@@ -78,25 +60,6 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     });
   }
 
-  void _select(String string) {
-    if (string == Constants.MakeQR) {
-      showMakeQRcodePage(context);
-    } else if (string == Constants.ReadQR) {
-      showReadQRcodePage(context);
-    }
-  }
-
-  showMakeQRcodePage(BuildContext context) {
-    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new GenerateScreen();
-    }));
-  }
-
-  showReadQRcodePage(BuildContext context) {
-    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new ScanScreen();
-    }));
-  }
 
   Widget scheduleAppbar() {
     return new TabBar(
@@ -119,26 +82,4 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     );
   }
 
-  Widget profileAppbar() {
-    return new TabBar(
-        controller: _profile_tabController,
-        indicatorColor: Colors.white,
-        tabs: <Widget>[
-          new Tab(
-            text: "Level",
-          ),
-          new Tab(text: "QRCode"),
-          new Tab(text: "Scan"),
-        ]);
-  }
-
-  Widget profileBody() {
-    return new Scaffold(
-      body: new TabBarView(controller: _profile_tabController, children: <Widget>[
-        PlaceholderWidget(Colors.greenAccent),
-        new GenerateScreen(),
-        new ScanScreen(),
-      ]),
-    );
-  }
 }
