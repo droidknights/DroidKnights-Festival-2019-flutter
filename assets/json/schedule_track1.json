@@ -1,65 +1,90 @@
 [
   {
+    "type": 0,
+    "name": "",
+    "title": "등록",
+    "time": "9:00",
+    "avatarUrl": "",
+    "contents": ""
+  },
+  {
+    "type": 0,
+    "name": "",
+    "title": "키노트",
+    "time": "9:50",
+    "avatarUrl": "",
+    "contents": ""
+  },
+  {
+    "type": 1,
     "name": "노재춘",
     "title": "RxJava 구독과 구독 제거 메커니즘 설명",
     "time": "10:10",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "하동현",
     "title": "지금까지 이런 간단한 Logic 처리는 없었다. 이것은 Rx인가, UI 이벤트인가?",
     "time": "11:10",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "남상균",
     "title": "코틀린 디자인 패턴",
     "time": "11:55",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "박상권",
     "title": "Kotlin 꼭 해야하나요?",
     "time": "12:55",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 0,
     "name": "",
     "title": "점심 시간",
-    "time": "13:25",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "time": "13:25 \n~ 15:00",
+    "avatarUrl": "",
     "contents": "13:25 ~ 15:00\n약 90분동안 점심 식사 시간입니다."
   },
   {
+    "type": 1,
     "name": "정동진",
     "title": "코루틴 너 은행에서 뭐하니?",
     "time": "15:00",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "권태환",
     "title": "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?",
     "time": "16:00",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "정현지",
     "title": "Dagger vs Koin 무엇이 좋을까요?",
     "time": "16:45",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "김범준",
     "title": "Release ViewPager2!",
-    "time": "17:30",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "time": "17:45",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   }
 ]

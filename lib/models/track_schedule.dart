@@ -13,16 +13,18 @@ class ScheduleListModel{
   }
 }
 class ScheduleModel{
+  final int type;
   final String name;
   final String title;
   final String time;
   final String avatarUrl;
   final String contents;
 
-  ScheduleModel({this.name, this.title, this.time, this.avatarUrl, this.contents});
+  ScheduleModel({this.type, this.name, this.title, this.time, this.avatarUrl, this.contents});
 
   factory ScheduleModel.fromJson(Map<String, dynamic> parsedJson){
     return ScheduleModel(
+        type: parsedJson['type'],
         name: parsedJson['name'],
         title: parsedJson['title'],
         time: parsedJson ['time'],
