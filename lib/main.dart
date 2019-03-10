@@ -9,8 +9,10 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: "DroidKnights",
       theme: new ThemeData(
-          primaryColor: new Color(0xff075E54),
-          accentColor: new Color(0xff25D366)
+          primaryColor: new Color(0xff000000),
+          accentColor: new Color(0xff40d225),
+          indicatorColor: new Color(0xff40d225),
+          primaryColorLight: new Color(0xff96ce7e)
       ),
       debugShowCheckedModeBanner: false,
       home: new DroidknightsAppHome(),

@@ -1,27 +1,34 @@
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/pages/session_detail_page.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
 import 'package:droidknights/models/schedule_service.dart';
 
-class TrackOneScreen extends StatefulWidget {
+class TrackScreen extends StatefulWidget {
+
+  final String filePath;
+
+  TrackScreen(this.filePath);
+
   @override
-  TrackOneScreenState createState() {
-    return new TrackOneScreenState();
+  TrackScreenState createState() {
+    return new TrackScreenState(filePath);
   }
 }
 
-class TrackOneScreenState extends State<TrackOneScreen> {
+class TrackScreenState extends State<TrackScreen> {
   List<ScheduleModel> datas;
+
+  final String filePath;
+  TrackScreenState(this.filePath);
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
         body: new FutureBuilder(
-            future: loadSchedule(),
-            builder: (BuildContext context,
-                AsyncSnapshot<List<ScheduleModel>> snapshot) {
-              if (!snapshot.hasData) return new Container();
+            future: loadSchedule(filePath),
+            builder: (BuildContext context, AsyncSnapshot<List<ScheduleModel>> snapshot) {
+              if (!snapshot.hasData)
+                return new Container();
               datas = snapshot.data;
               return new Container(
                 color: Colors.black,
@@ -41,7 +48,7 @@ class TrackOneScreenState extends State<TrackOneScreen> {
         new ListTile(
           leading: new Text(
             datas[i].time,
-            style: new TextStyle(color: Colors.green[300], fontSize: 12.0),
+            style: new TextStyle(color: Theme.of(context).primaryColorLight, fontSize: 12.0),
           ),
           title: new Container(
             decoration: new BoxDecoration(
@@ -66,7 +73,7 @@ class TrackOneScreenState extends State<TrackOneScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 6.0)),
                 new Flexible(
                   child: new Container(
-                    height: 80.0,
+                    height: 60.0,
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,7 +86,7 @@ class TrackOneScreenState extends State<TrackOneScreen> {
                         ),
                         new Text(
                           datas[i].name,
-                          style: new TextStyle(color: Colors.green[200], fontSize: 12.0),
+                          style: new TextStyle(color: new Color(0xffa5b495), fontSize: 12.0),
                         ),
                       ],
                     ),
@@ -88,38 +95,10 @@ class TrackOneScreenState extends State<TrackOneScreen> {
               ],
             ),
           ),
-          /*subtitle: new Container(
-              padding: const EdgeInsets.only(
-                top: 5.0,
-              ),
-              child: new Row(
-                children: <Widget>[
-                  new Text(
-                    datas[i].title,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: new TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  new Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5.0)),
-                  new Text(
-                    datas[i].name,
-                    style: new TextStyle(color: Colors.grey, fontSize: 15.0),
-                  ),
-                ],
-              )
-          ),*/
           onTap: () => showDetailPage(context, i),
         ),
       ],
     );
-  }
-
-  _getScheduleData() async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString("assets/json/schedule_track1.json");
-    final jsonResult = json.decode(data);
-    print(jsonResult);
   }
 
   showDetailPage(BuildContext context, int i) {

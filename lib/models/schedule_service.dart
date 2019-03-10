@@ -4,13 +4,13 @@ import 'dart:convert';
 import 'package:droidknights/models/track_schedule.dart';
 
 
-Future<String> _loadAScheduleAsset() async {
-  return await rootBundle.loadString('assets/json/schedule_track1.json');
+Future<String> _loadAScheduleAsset(String path) async {
+  return await rootBundle.loadString(path);
 }
 
 
-Future<List<ScheduleModel>> loadSchedule() async {
-  String jsonString = await _loadAScheduleAsset();
+Future<List<ScheduleModel>> loadSchedule(String path) async {
+  String jsonString = await _loadAScheduleAsset(path);
   final jsonResponse = json.decode(jsonString);
   ScheduleListModel schedule = new ScheduleListModel.fromJson(jsonResponse);
   return schedule.list;

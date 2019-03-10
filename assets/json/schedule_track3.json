@@ -1,63 +1,63 @@
 [
   {
-    "name": "노재춘",
-    "title": "RxJava 구독과 구독 제거 메커니즘 설명",
+    "name": "정승욱",
+    "title": "동적 맵 프레임워크와 인터렉션 구현하기",
     "time": "10:10",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "하동현",
-    "title": "지금까지 이런 간단한 Logic 처리는 없었다. 이것은 Rx인가, UI 이벤트인가?",
+    "name": "Yusuke Konishi",
+    "title": "Master of Android Theme (English)",
     "time": "11:10",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "남상균",
-    "title": "코틀린 디자인 패턴",
+    "name": "노현석",
+    "title": "MotionLayout 무릎까지 담궈보기",
     "time": "11:55",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "박상권",
-    "title": "Kotlin 꼭 해야하나요?",
+    "name": "장인수",
+    "title": "Flutter Native Module Bady Step",
     "time": "12:55",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
     "name": "",
-    "title": "점심 시간",
+    "title": "점심시간",
     "time": "13:25",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "13:25 ~ 15:00\n약 90분동안 점심 식사 시간입니다."
   },
   {
-    "name": "정동진",
-    "title": "코루틴 너 은행에서 뭐하니?",
+    "name": "양찬석",
+    "title": "구글 플레이의 다이나믹 딜리버리 (APK는 이제 안녕)",
     "time": "15:00",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "권태환",
-    "title": "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?",
+    "name": "안명욱",
+    "title": "Window 다루는 방법",
     "time": "16:00",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "정현지",
-    "title": "Dagger vs Koin 무엇이 좋을까요?",
+    "name": "차영호",
+    "title": "Android Gradle Plugin 버그 잡기",
     "time": "16:45",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "김범준",
-    "title": "Release ViewPager2!",
+    "name": "신정아",
+    "title": "Tensorflow Lite 부터 MLKit, Mobile GPU 활용까지",
     "time": "17:30",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
