@@ -1,63 +1,63 @@
 [
   {
-    "name": "노재춘",
-    "title": "RxJava 구독과 구독 제거 메커니즘 설명",
+    "name": "김성일",
+    "title": "안드로이드 TDD 적용기",
     "time": "10:10",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "하동현",
-    "title": "지금까지 이런 간단한 Logic 처리는 없었다. 이것은 Rx인가, UI 이벤트인가?",
+    "name": "장선옥",
+    "title": "Android Project with Multi Module",
     "time": "11:10",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "남상균",
-    "title": "코틀린 디자인 패턴",
+    "name": "황성현",
+    "title": "Clean Architecture (in Android) Revised",
     "time": "11:55",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "박상권",
-    "title": "Kotlin 꼭 해야하나요?",
+    "name": "김현",
+    "title": "모바일에서 오프라인 모드 적용 사례",
     "time": "12:55",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
     "name": "",
-    "title": "점심 시간",
+    "title": "점심시간",
     "time": "13:25",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "13:25 ~ 15:00\n약 90분동안 점심 식사 시간입니다."
   },
   {
-    "name": "정동진",
-    "title": "코루틴 너 은행에서 뭐하니?",
+    "name": "강사룡",
+    "title": "안드로이드 아키텍처 총정리",
     "time": "15:00",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "권태환",
-    "title": "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?",
+    "name": "박민석",
+    "title": "PWA 품은 안드로이드 웹뷰 경험기",
     "time": "16:00",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "정현지",
-    "title": "Dagger vs Koin 무엇이 좋을까요?",
+    "name": "남반석",
+    "title": "SVC 패턴으로 앱 쉽게 만들기",
     "time": "16:45",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
   },
   {
-    "name": "김범준",
-    "title": "Release ViewPager2!",
+    "name": "박미륵",
+    "title": "Advanced MVP",
     "time": "17:30",
     "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
     "contents": "추후 추가 예정"
