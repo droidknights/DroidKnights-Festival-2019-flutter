@@ -1,65 +1,90 @@
 [
   {
+    "type": 0,
+    "name": "",
+    "title": "등록",
+    "time": "9:00",
+    "avatarUrl": "",
+    "contents": ""
+  },
+  {
+    "type": 0,
+    "name": "",
+    "title": "키노트",
+    "time": "9:50",
+    "avatarUrl": "",
+    "contents": ""
+  },
+  {
+    "type": 1,
     "name": "김성일",
     "title": "안드로이드 TDD 적용기",
     "time": "10:10",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "장선옥",
     "title": "Android Project with Multi Module",
     "time": "11:10",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "황성현",
     "title": "Clean Architecture (in Android) Revised",
     "time": "11:55",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "김현",
     "title": "모바일에서 오프라인 모드 적용 사례",
     "time": "12:55",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 0,
     "name": "",
     "title": "점심시간",
-    "time": "13:25",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "time": "13:25 \n~ 15:00",
+    "avatarUrl": "",
     "contents": "13:25 ~ 15:00\n약 90분동안 점심 식사 시간입니다."
   },
   {
+    "type": 1,
     "name": "강사룡",
     "title": "안드로이드 아키텍처 총정리",
     "time": "15:00",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "박민석",
     "title": "PWA 품은 안드로이드 웹뷰 경험기",
     "time": "16:00",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "남반석",
     "title": "SVC 패턴으로 앱 쉽게 만들기",
     "time": "16:45",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   },
   {
+    "type": 1,
     "name": "박미륵",
     "title": "Advanced MVP",
-    "time": "17:30",
-    "avatarUrl": "https://avatars1.githubusercontent.com/u/7722921?s=460&v=4",
+    "time": "17:45",
+    "avatarUrl": "",
     "contents": "추후 추가 예정"
   }
 ]
