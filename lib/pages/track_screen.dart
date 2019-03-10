@@ -1,5 +1,5 @@
 import 'package:droidknights/models/track_schedule.dart';
-import 'package:droidknights/pages/session_detail_page.dart';
+import 'package:droidknights/pages/session_detail_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:droidknights/models/schedule_service.dart';
 
@@ -16,7 +16,7 @@ class TrackScreen extends StatefulWidget {
 
 class TrackScreenState extends State<TrackScreen> {
   static final int ITEMVIEW_TYPE_NORMAL = 0;
-  static final int ITEMVIEW_TYPE_SECTION = 1;
+  static final int ITEMVIEW_TYPE_SESSTION = 1;
 
   List<ScheduleModel> datas;
 
@@ -38,13 +38,13 @@ class TrackScreenState extends State<TrackScreen> {
                 child: new ListView.builder(
                     itemCount: datas.length,
                     itemBuilder: (context, i) =>
-                        new Column(children: <Widget>[_itemView(context, i)])),
+                    new Column(children: <Widget>[_itemView(context, i)])),
               );
             }));
   }
 
   ListTile _itemView(context, i) {
-    if (datas[i].type == ITEMVIEW_TYPE_SECTION) {
+    if (datas[i].type == ITEMVIEW_TYPE_SESSTION) {
       return _showItemSection(context, i);
     } else {
       return _showItemNormal(context, i);
@@ -63,7 +63,8 @@ class TrackScreenState extends State<TrackScreen> {
             color: Colors.white,
             borderRadius: new BorderRadius.all(
               const Radius.circular(4.0),
-            )),
+            )
+        ),
         padding: const EdgeInsets.all(12.0),
         child: new Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -120,8 +121,6 @@ class TrackScreenState extends State<TrackScreen> {
   }
 
   showDetailPage(BuildContext context, int i) {
-    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-      return new SessionDetailPage(datas[i]);
-    }));
+    Navigator.of(context).push(SessionDetailDialog(datas[i]));
   }
 }
