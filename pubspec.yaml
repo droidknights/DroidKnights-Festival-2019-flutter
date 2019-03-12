@@ -15,8 +15,6 @@ environment:
 dependencies:
   google_maps_flutter: ^0.3.0+2
   path_provider: 0.4.1
-  barcode_scan: ^0.0.4
-  qr_flutter: ^1.1.1
   flutter:
     sdk: flutter
   url_launcher: ^5.0.1
