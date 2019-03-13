@@ -29,19 +29,7 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: new AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/dk_appbar_title.png',
-                  fit: BoxFit.contain,
-                  height: 25,
-                )
-              ],
-            ),
-            elevation: 0.7,
-            bottom: _appbar[_currentIndex]),
+        appBar: appBar(),
         bottomNavigationBar: bottomNavigationBar(),
         body: _children[_currentIndex]);
   }
@@ -52,7 +40,21 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
     });
   }
 
-  Widget bottomNavigationBar() => BottomNavigationBar(
+  Widget appBar() => new AppBar(
+    title: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Image.asset(
+        'assets/images/dk_appbar_title.png',
+        fit: BoxFit.contain,
+        height: 25,
+      )
+    ],),
+    elevation: 0.7,
+    bottom: _appbar[_currentIndex]
+  );
+
+  Widget bottomNavigationBar() => new BottomNavigationBar(
     onTap: onTabTapped,
     currentIndex: _currentIndex,
     // this will be set when a new tab is tapped
