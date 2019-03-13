@@ -42,21 +42,7 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
             ),
             elevation: 0.7,
             bottom: _appbar[_currentIndex]),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: onTabTapped,
-          currentIndex: _currentIndex,
-          // this will be set when a new tab is tapped
-          items: [
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.info),
-              title: new Text('Info'),
-            ),
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.schedule),
-              title: new Text('Schedule'),
-            ),
-          ],
-        ),
+        bottomNavigationBar: bottomNavigationBar(),
         body: _children[_currentIndex]);
   }
 
@@ -65,6 +51,22 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
       _currentIndex = index;
     });
   }
+
+  Widget bottomNavigationBar() => BottomNavigationBar(
+    onTap: onTabTapped,
+    currentIndex: _currentIndex,
+    // this will be set when a new tab is tapped
+    items: [
+      BottomNavigationBarItem(
+        icon: new Icon(Icons.info),
+        title: new Text('Info'),
+      ),
+      BottomNavigationBarItem(
+        icon: new Icon(Icons.schedule),
+        title: new Text('Schedule'),
+      ),
+    ]
+  );
 
   Widget scheduleAppbar() {
     return new TabBar(
