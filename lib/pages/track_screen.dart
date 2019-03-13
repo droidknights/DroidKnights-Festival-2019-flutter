@@ -1,7 +1,7 @@
+import 'package:droidknights/models/schedule_service.dart';
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/pages/session_detail_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:droidknights/models/schedule_service.dart';
 
 class TrackScreen extends StatefulWidget {
   final String filePath;
@@ -38,7 +38,7 @@ class TrackScreenState extends State<TrackScreen> {
                 child: new ListView.builder(
                     itemCount: datas.length,
                     itemBuilder: (context, i) =>
-                    new Column(children: <Widget>[_itemView(context, i)])),
+                        new Column(children: <Widget>[_itemView(context, i)])),
               );
             }));
   }
@@ -63,8 +63,7 @@ class TrackScreenState extends State<TrackScreen> {
             color: Colors.white,
             borderRadius: new BorderRadius.all(
               const Radius.circular(4.0),
-            )
-        ),
+            )),
         padding: const EdgeInsets.all(12.0),
         child: new Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -73,14 +72,16 @@ class TrackScreenState extends State<TrackScreen> {
               maxRadius: 28.0,
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
-              backgroundImage: new NetworkImage(
-                datas[i].avatarUrl,
-              ),
+              backgroundImage: datas[i].avatarUrl == ""
+                  ? new Image.asset('assets/images/dk_profile.png').image
+                  : new NetworkImage(
+                      datas[i].avatarUrl,
+                    ),
             ),
             new Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
             new Flexible(
               child: new Container(
-                height: 60.0,
+                constraints: BoxConstraints(minHeight: 60.0),
                 child: new Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,11 +112,13 @@ class TrackScreenState extends State<TrackScreen> {
     return new ListTile(
       leading: new Text(
         datas[i].time,
-        style: new TextStyle(color: Theme.of(context).primaryColorLight, fontSize: 12.0),
+        style: new TextStyle(
+            color: Theme.of(context).primaryColorLight, fontSize: 12.0),
       ),
       title: new Text(
         datas[i].title,
-        style: new TextStyle(color: Theme.of(context).accentColor, fontSize: 16.0),
+        style:
+            new TextStyle(color: Theme.of(context).accentColor, fontSize: 16.0),
       ),
     );
   }

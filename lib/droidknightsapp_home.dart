@@ -29,34 +29,8 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: new AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/dk_appbar_title.png',
-                  fit: BoxFit.contain,
-                  height: 25,
-                )
-              ],
-            ),
-            elevation: 0.7,
-            bottom: _appbar[_currentIndex]),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: onTabTapped,
-          currentIndex: _currentIndex,
-          // this will be set when a new tab is tapped
-          items: [
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.info),
-              title: new Text('Info'),
-            ),
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.schedule),
-              title: new Text('Schedule'),
-            ),
-          ],
-        ),
+        appBar: appBar(),
+        bottomNavigationBar: bottomNavigationBar(),
         body: _children[_currentIndex]);
   }
 
@@ -65,6 +39,36 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
       _currentIndex = index;
     });
   }
+
+  Widget appBar() => new AppBar(
+    title: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Image.asset(
+        'assets/images/dk_appbar_title.png',
+        fit: BoxFit.contain,
+        height: 25,
+      )
+    ],),
+    elevation: 0.7,
+    bottom: _appbar[_currentIndex]
+  );
+
+  Widget bottomNavigationBar() => new BottomNavigationBar(
+    onTap: onTabTapped,
+    currentIndex: _currentIndex,
+    // this will be set when a new tab is tapped
+    items: [
+      BottomNavigationBarItem(
+        icon: new Icon(Icons.info),
+        title: new Text('Info'),
+      ),
+      BottomNavigationBarItem(
+        icon: new Icon(Icons.schedule),
+        title: new Text('Schedule'),
+      ),
+    ]
+  );
 
   Widget scheduleAppbar() {
     return new TabBar(
