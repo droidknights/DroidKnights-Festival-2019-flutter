@@ -80,7 +80,7 @@ class TrackScreenState extends State<TrackScreen> {
             new Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
             new Flexible(
               child: new Container(
-                height: 60.0,
+                constraints: BoxConstraints(minHeight: 60.0),
                 child: new Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
