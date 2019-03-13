@@ -7,8 +7,6 @@ class SchedulePage extends StatelessWidget {
   static final int ITEMVIEW_TYPE_NORMAL = 0;
   static final int ITEMVIEW_TYPE_SESSTION = 1;
 
-  List<ScheduleModel> datas;
-
   Widget scheduleAppbar() {
     return TabBar(
       labelColor: Color(0xff40d225),
@@ -53,31 +51,30 @@ class SchedulePage extends StatelessWidget {
       builder: (BuildContext context,
           AsyncSnapshot<List<ScheduleModel>> snapshot) {
         if (!snapshot.hasData) return Container(color: Colors.black);
-        datas = snapshot.data;
         return Container(
           color: Colors.black,
           child: ListView.builder(
-            itemCount: datas.length,
+            itemCount: snapshot.data.length,
             itemBuilder: (context, i) =>
-              Column(children: <Widget>[_itemView(context, i)])
+              Column(children: <Widget>[_itemView(context, snapshot.data[i])])
           ),
         );
       }
      );
   }
 
-  ListTile _itemView(context, i) {
-    if (datas[i].type == ITEMVIEW_TYPE_SESSTION) {
-      return _showItemSection(context, i);
+  ListTile _itemView(context, data) {
+    if (data.type == ITEMVIEW_TYPE_SESSTION) {
+      return _showItemSection(context, data);
     } else {
-      return _showItemNormal(context, i);
+      return _showItemNormal(context, data);
     }
   }
 
-  ListTile _showItemSection(context, i) {
+  ListTile _showItemSection(context, data) {
     return ListTile(
       leading: Text(
-        datas[i].time,
+        data.time,
         style: TextStyle(
             color: Theme.of(context).primaryColorLight, fontSize: 12.0),
       ),
@@ -97,7 +94,7 @@ class SchedulePage extends StatelessWidget {
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
               backgroundImage: NetworkImage(
-                datas[i].avatarUrl,
+                data.avatarUrl,
               ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
@@ -109,13 +106,13 @@ class SchedulePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      datas[i].title,
+                      data.title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 16.0),
                     ),
                     Text(
-                      datas[i].name,
+                      data.name,
                       style: TextStyle(
                           color: Color(0xffa5b495), fontSize: 12.0),
                     ),
@@ -126,24 +123,24 @@ class SchedulePage extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () => showDetailPage(context, i),
+      onTap: () => showDetailPage(context, data),
     );
   }
 
-  ListTile _showItemNormal(context, i) {
+  ListTile _showItemNormal(context, data) {
     return ListTile(
       leading: Text(
-        datas[i].time,
+        data.time,
         style: TextStyle(color: Theme.of(context).primaryColorLight, fontSize: 12.0),
       ),
       title: Text(
-        datas[i].title,
+        data.title,
         style: TextStyle(color: Theme.of(context).accentColor, fontSize: 16.0),
       ),
     );
   }
 
-  showDetailPage(BuildContext context, int i) {
-    Navigator.of(context).push(SessionDetailDialog(datas[i]));
+  showDetailPage(BuildContext context, data) {
+    Navigator.of(context).push(SessionDetailDialog(data));
   }
 }
