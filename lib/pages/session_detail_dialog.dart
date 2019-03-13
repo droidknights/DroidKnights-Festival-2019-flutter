@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:droidknights/models/track_schedule.dart';
+import 'package:flutter/material.dart';
 
 class SessionDetailDialog extends ModalRoute<void> {
   final ScheduleModel sessionData;
@@ -38,17 +38,17 @@ class SessionDetailDialog extends ModalRoute<void> {
         child: new Stack(
           children: <Widget>[
             new Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  new Padding(
-                    padding: const EdgeInsets.all(27.0),
-                    child: new IconButton(
-                      icon: new Image.asset("assets/images/ic_close.png"),
-                      iconSize: 24,
-                      onPressed: () => Navigator.pop(context),
-                    ),
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                new Padding(
+                  padding: const EdgeInsets.all(27.0),
+                  child: new IconButton(
+                    icon: new Image.asset("assets/images/ic_close.png"),
+                    iconSize: 24,
+                    onPressed: () => Navigator.pop(context),
                   ),
-                ],
+                ),
+              ],
             ),
             _buildOverlayContent(context),
           ],
@@ -73,7 +73,8 @@ class SessionDetailDialog extends ModalRoute<void> {
                   const Radius.circular(4.0),
                 ),
               ),
-              padding: const EdgeInsets.only(left: 10.0, right: 10, top: 16, bottom: 35),
+              padding: const EdgeInsets.only(
+                  left: 10.0, right: 10, top: 16, bottom: 35),
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
@@ -152,7 +153,9 @@ class SessionDetailDialog extends ModalRoute<void> {
           ],
           image: new DecorationImage(
             fit: BoxFit.cover,
-            image: new NetworkImage(sessionData.avatarUrl ?? ''),
+            image: (sessionData.avatarUrl ?? '') == ''
+                ? new Image.asset('assets/images/dk_profile.png').image
+                : new NetworkImage(sessionData.avatarUrl ?? ''),
           ),
         ),
       ),
