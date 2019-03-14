@@ -45,6 +45,12 @@ class InfoPageState extends State<InfoPage> {
       fontWeight: FontWeight.w200,
       fontFamily: Strings.FONT_FAMILY_ROBOTO);
 
+  final TextStyle _buttonTextStyle = new TextStyle(
+      fontSize: 15.0,
+      color: const Color(0xFFededed),
+      fontWeight: FontWeight.w500,
+      fontFamily: "Roboto");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,6 +74,7 @@ class InfoPageState extends State<InfoPage> {
             sectionTopPadding(),
             sectionTitle(Strings.INFO_TAB_SECTION_TITLE_DROID_KNIGHTS),
             sectionSubTitle(Strings.INFO_TAB_SECTION_SUB_TITLE_INTRO),
+            goToHomepage(),
             sectionTopPadding(),
             sectionTitle(Strings.INFO_TAB_SECTION_TITLE_PROGRAM),
             sectionSubTitle(Strings.INFO_TAB_SECTION_SUB_TITLE_INTRO2),
@@ -109,6 +116,12 @@ class InfoPageState extends State<InfoPage> {
   Widget sectionTitle(String title) => new Text(title, style: _titleTextStyle,);
 
   Widget sectionSubTitle(String title) => new Text(title, style: _subtitleTextStyle,);
+
+  Widget goToHomepage() => new MaterialButton(
+    onPressed: () => _launchURL('https://droidknights.github.io/2019/'),
+    color: const Color(0xFF77e448),
+    child: new Text("홈페이지로 이동", style: _buttonTextStyle),
+  );
 
   Widget programList() => new SingleChildScrollView(
       scrollDirection: Axis.horizontal,
