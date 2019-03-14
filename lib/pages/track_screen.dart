@@ -43,7 +43,7 @@ class TrackScreenState extends State<TrackScreen> {
             }));
   }
 
-  ListTile _itemView(context, i) {
+  Widget _itemView(context, i) {
     if (datas[i].type == ITEMVIEW_TYPE_SESSTION) {
       return _showItemSection(context, i);
     } else {
@@ -51,7 +51,7 @@ class TrackScreenState extends State<TrackScreen> {
     }
   }
 
-  ListTile _showItemSection(context, i) {
+  Widget _showItemSection(context, i) {
     return new ListTile(
       leading: new Text(
         datas[i].time,
@@ -60,10 +60,18 @@ class TrackScreenState extends State<TrackScreen> {
       ),
       title: new Container(
         decoration: new BoxDecoration(
-            color: Colors.white,
-            borderRadius: new BorderRadius.all(
-              const Radius.circular(4.0),
-            )),
+          color: Colors.white,
+          borderRadius: new BorderRadius.all(
+            const Radius.circular(4.0),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xFFE9EEF6),
+              blurRadius: 4.0,
+              offset: Offset(0, 2.0),
+            ),
+          ],
+        ),
         padding: const EdgeInsets.all(12.0),
         child: new Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -108,7 +116,7 @@ class TrackScreenState extends State<TrackScreen> {
     );
   }
 
-  ListTile _showItemNormal(context, i) {
+  Widget _showItemNormal(context, i) {
     return new ListTile(
       leading: new Text(
         datas[i].time,
