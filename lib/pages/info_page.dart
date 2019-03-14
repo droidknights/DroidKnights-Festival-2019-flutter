@@ -74,7 +74,7 @@ class InfoPageState extends State<InfoPage> {
                 sectionTopPadding(),
                 sectionTitle("DROID KNIGHTS 2019"),
                 sectionSubTitle("드로이드나이츠는 \"안드로이드 개발자들을 위한 컨퍼런스\"를 표방하며 안드로이드 기술에 대한 세션으로 안드로이드 개발자들의 경험을 공유하고 만남의 장을 만드는 컨퍼런스 입니다.\n한국은 높은 안드로이드점유율과 관련 제조사, 플랫폼 개발회사, 앱 개발회사 등 개발 생태계가 잘 발달하였음에도 불구하고 안드로이드 개발자들이 지식을 나눌 수 있는 기회가 부족하다는 필요로 인해 비영리 개발자 조직에 의해 만들어졌습니다.\n드로이드나이츠 2017, 2018을 성공리에 개최하고 이번 2019년에는 더욱 성숙한 행사를 통해 안드로이드 개발자들이 새로운 기술과 정보를 공유하고 서로 교류할 수 있는 행사가 되기를 희망합니다."),
-                goToHompage(),
+                goToHomepage(),
                 sectionTopPadding(),
                 sectionTitle("PROGRAM"),
                 sectionSubTitle("2019 드로이드 나이츠는 세션 이외의 다양한 프로그램을 준비하고 있습니다."),
@@ -117,7 +117,7 @@ class InfoPageState extends State<InfoPage> {
 
   Widget sectionSubTitle(String title) => new Text(title, style: _subtitleTextStyle,);
 
-  Widget goToHompage() => new MaterialButton(
+  Widget goToHomepage() => new MaterialButton(
     onPressed: () => _launchURL('https://droidknights.github.io/2019/'),
     color: const Color(0xFF77e448),
     child: new Text("홈페이지로 이동", style: _buttonTextStyle),
