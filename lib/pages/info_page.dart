@@ -194,11 +194,12 @@ class InfoPageState extends State<InfoPage> {
             children: <Widget>[
               GestureDetector(
                 onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_PRD),
-                child: Image.network(
-                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_PRD,
-                  width: 50.0,
-                  fit: BoxFit.fitWidth,
-                ),
+                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                // child: Image.network(
+                //   Strings.INFO_TAB_URL_IMAGE_SPONSOR_PRD,
+                //   width: 50.0,
+                //   fit: BoxFit.fitWidth,
+                // ),
               ),
             ],
           ),
