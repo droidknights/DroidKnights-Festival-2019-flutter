@@ -63,7 +63,7 @@ class SchedulePage extends StatelessWidget {
      );
   }
 
-  ListTile _itemView(context, data) {
+  Widget _itemView(context, data) {
     if (data.type == ITEMVIEW_TYPE_SESSTION) {
       return _showItemSection(context, data);
     } else {
@@ -71,7 +71,7 @@ class SchedulePage extends StatelessWidget {
     }
   }
 
-  ListTile _showItemSection(context, data) {
+  Widget _showItemSection(context, data) {
     return ListTile(
       leading: Text(
         data.time,
@@ -80,10 +80,17 @@ class SchedulePage extends StatelessWidget {
       ),
       title: Container(
         decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(
-              const Radius.circular(4.0),
-            )
+          color: Colors.white,
+          borderRadius: new BorderRadius.all(
+            const Radius.circular(4.0),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xFFE9EEF6),
+              blurRadius: 4.0,
+              offset: Offset(0, 2.0),
+            ),
+          ],
         ),
         padding: const EdgeInsets.all(12.0),
         child: Row(
@@ -129,7 +136,7 @@ class SchedulePage extends StatelessWidget {
     );
   }
 
-  ListTile _showItemNormal(context, data) {
+  Widget _showItemNormal(context, data) {
     return ListTile(
       leading: Text(
         data.time,
