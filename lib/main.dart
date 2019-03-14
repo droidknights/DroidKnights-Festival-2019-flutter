@@ -1,3 +1,5 @@
+import 'package:droidknights/const/route.dart';
+import 'package:droidknights/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:droidknights/droidknightsapp_home.dart';
 
@@ -15,7 +17,10 @@ class MyApp extends StatelessWidget {
           primaryColorLight: new Color(0xff96ce7e)
       ),
       debugShowCheckedModeBanner: false,
-      home: new DroidknightsAppHome(),
+      routes: {
+        Routes.SPLASH: (_) => new SplashScreen(),
+        Routes.HOME: (_) => new DroidknightsAppHome(),
+      }
     );
   }
 }
