@@ -27,6 +27,7 @@ class TrackScreenState extends State<TrackScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+        backgroundColor: Colors.black,
         body: new FutureBuilder(
             future: loadSchedule(filePath),
             builder: (BuildContext context,
