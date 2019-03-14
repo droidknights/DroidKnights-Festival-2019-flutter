@@ -45,6 +45,12 @@ class InfoPageState extends State<InfoPage> {
       fontWeight: FontWeight.w200,
       fontFamily: "Roboto");
 
+  final TextStyle _buttonTextStyle = new TextStyle(
+      fontSize: 15.0,
+      color: const Color(0xFFededed),
+      fontWeight: FontWeight.w500,
+      fontFamily: "Roboto");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,33 +60,34 @@ class InfoPageState extends State<InfoPage> {
 
   _contentWidget() {
     return Container(
-      color: const Color(0xFF112030),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        padding: const EdgeInsets.all(_sectionAllPadding),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            imageBanner(),
-            mainTitle("오직 안드로이드 개발자들을 위한 컨퍼런스! 드로이드나이츠 2019"),
-            sectionTopPadding(),
-            sectionTitle("DROID KNIGHTS 2019"),
-            sectionSubTitle("드로이드나이츠는 \"안드로이드 개발자들을 위한 컨퍼런스\"를 표방하며 안드로이드 기술에 대한 세션으로 안드로이드 개발자들의 경험을 공유하고 만남의 장을 만드는 컨퍼런스 입니다.\n한국은 높은 안드로이드점유율과 관련 제조사, 플랫폼 개발회사, 앱 개발회사 등 개발 생태계가 잘 발달하였음에도 불구하고 안드로이드 개발자들이 지식을 나눌 수 있는 기회가 부족하다는 필요로 인해 비영리 개발자 조직에 의해 만들어졌습니다.\n드로이드나이츠 2017, 2018을 성공리에 개최하고 이번 2019년에는 더욱 성숙한 행사를 통해 안드로이드 개발자들이 새로운 기술과 정보를 공유하고 서로 교류할 수 있는 행사가 되기를 희망합니다."),
-            sectionTopPadding(),
-            sectionTitle("PROGRAM"),
-            sectionSubTitle("2019 드로이드 나이츠는 세션 이외의 다양한 프로그램을 준비하고 있습니다."),
-            programList(),
-            sectionTopPadding(),
-            sectionTitle("LOCATION"),
-            sectionSubTitle("장소 : 코엑스 E홀 / 서울특별시 강남구 영동대로 513 (삼성동, 코엑스)"),
-            googleMap(),
-            sectionTitle("SPONSOR"),
-            sponsorList(),
-          ]
-        ),
-      )
+        color: const Color(0xFF112030),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          padding: const EdgeInsets.all(_sectionAllPadding),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                imageBanner(),
+                mainTitle("오직 안드로이드 개발자들을 위한 컨퍼런스! 드로이드나이츠 2019"),
+                sectionTopPadding(),
+                sectionTitle("DROID KNIGHTS 2019"),
+                sectionSubTitle("드로이드나이츠는 \"안드로이드 개발자들을 위한 컨퍼런스\"를 표방하며 안드로이드 기술에 대한 세션으로 안드로이드 개발자들의 경험을 공유하고 만남의 장을 만드는 컨퍼런스 입니다.\n한국은 높은 안드로이드점유율과 관련 제조사, 플랫폼 개발회사, 앱 개발회사 등 개발 생태계가 잘 발달하였음에도 불구하고 안드로이드 개발자들이 지식을 나눌 수 있는 기회가 부족하다는 필요로 인해 비영리 개발자 조직에 의해 만들어졌습니다.\n드로이드나이츠 2017, 2018을 성공리에 개최하고 이번 2019년에는 더욱 성숙한 행사를 통해 안드로이드 개발자들이 새로운 기술과 정보를 공유하고 서로 교류할 수 있는 행사가 되기를 희망합니다."),
+                goToHompage(),
+                sectionTopPadding(),
+                sectionTitle("PROGRAM"),
+                sectionSubTitle("2019 드로이드 나이츠는 세션 이외의 다양한 프로그램을 준비하고 있습니다."),
+                programList(),
+                sectionTopPadding(),
+                sectionTitle("LOCATION"),
+                sectionSubTitle("장소 : 코엑스 E홀 / 서울특별시 강남구 영동대로 513 (삼성동, 코엑스)"),
+                googleMap(),
+                sectionTitle("SPONSOR"),
+                sponsorList(),
+              ]
+          ),
+        )
     );
   }
 
@@ -109,6 +116,12 @@ class InfoPageState extends State<InfoPage> {
   Widget sectionTitle(String title) => new Text(title, style: _titleTextStyle,);
 
   Widget sectionSubTitle(String title) => new Text(title, style: _subtitleTextStyle,);
+
+  Widget goToHompage() => new MaterialButton(
+    onPressed: () => _launchURL('https://droidknights.github.io/2019/'),
+    color: const Color(0xFF77e448),
+    child: new Text("홈페이지로 이동", style: _buttonTextStyle),
+  );
 
   Widget programList() => new SingleChildScrollView(
       scrollDirection: Axis.horizontal,
