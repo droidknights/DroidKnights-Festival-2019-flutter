@@ -2,6 +2,8 @@ import 'package:droidknights/const/route.dart';
 import 'package:droidknights/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:droidknights/droidknightsapp_home.dart';
+import 'package:droidknights/res/strings.dart';
+
 import 'bloc/bloc_provider.dart';
 import 'bloc/tab_bloc.dart';
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      title: "DroidKnights",
+      title: Strings.DROID_KNIGHTS,
       theme: ThemeData(
         primaryColor: Color(0xff000000),
         accentColor: Color(0xff40d225),
