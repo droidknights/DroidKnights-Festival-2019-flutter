@@ -28,6 +28,11 @@ class MyApp extends StatelessWidget {
         Routes.SPLASH: (_) => new SplashScreen(),
         Routes.HOME: (_) => new DroidknightsAppHome(),
       }
+      /*initialRoute: "/splash",
+      home: DroidknightsAppHome(),
+       routes: <String, WidgetBuilder> {
+          "/splash": (BuildContext context) => SplashScreen(),
+        },*/
     );
   }
 }
