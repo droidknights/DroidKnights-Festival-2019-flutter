@@ -1,4 +1,5 @@
 import 'package:droidknights/models/track_schedule.dart';
+import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
 
 class SessionDetailDialog extends ModalRoute<void> {
@@ -43,7 +44,7 @@ class SessionDetailDialog extends ModalRoute<void> {
                 new Padding(
                   padding: const EdgeInsets.all(27.0),
                   child: new IconButton(
-                    icon: new Image.asset("assets/images/ic_close.png"),
+                    icon: new Image.asset(Strings.SESSION_DIALOG_IMAGES_CLOSE),
                     iconSize: 24,
                     onPressed: () => Navigator.pop(context),
                   ),
@@ -154,7 +155,7 @@ class SessionDetailDialog extends ModalRoute<void> {
           image: new DecorationImage(
             fit: BoxFit.cover,
             image: (sessionData.avatarUrl ?? '') == ''
-                ? new Image.asset('assets/images/dk_profile.png').image
+                ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
                 : new NetworkImage(sessionData.avatarUrl ?? ''),
           ),
         ),

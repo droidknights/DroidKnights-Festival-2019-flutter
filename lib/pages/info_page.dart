@@ -49,7 +49,7 @@ class InfoPageState extends State<InfoPage> {
       fontSize: 15.0,
       color: const Color(0xFFededed),
       fontWeight: FontWeight.w500,
-      fontFamily: "Roboto");
+      fontFamily: Strings.FONT_FAMILY_ROBOTO);
 
   @override
   Widget build(BuildContext context) {
@@ -118,9 +118,9 @@ class InfoPageState extends State<InfoPage> {
   Widget sectionSubTitle(String title) => new Text(title, style: _subtitleTextStyle,);
 
   Widget goToHomepage() => new MaterialButton(
-    onPressed: () => _launchURL('https://droidknights.github.io/2019/'),
+    onPressed: () => _launchURL(Strings.INFO_TAB_URL_DROID_KNIGHTS),
     color: const Color(0xFF77e448),
-    child: new Text("홈페이지로 이동", style: _buttonTextStyle),
+    child: new Text(Strings.INFO_TAB_MOVE_HOMEPAGE, style: _buttonTextStyle),
   );
 
   Widget programList() => new SingleChildScrollView(
