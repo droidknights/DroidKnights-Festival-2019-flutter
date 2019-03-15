@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:droidknights/pages/info_page.dart';
 import 'package:droidknights/pages/schedule_page.dart';
+import 'package:droidknights/res/strings.dart';
+import 'package:flutter/material.dart';
 
 import 'bloc/bloc_provider.dart';
 import 'bloc/tab_bloc.dart';
@@ -22,11 +23,11 @@ class DroidknightsAppHome extends StatelessWidget {
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.info),
-                title: Text('Info'),
+                title: Text(Strings.INFO_TAB),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.schedule),
-                title: Text('Schedule'),
+                title: Text(Strings.SCHEDULE_TAB),
               ),
             ],
           ) 

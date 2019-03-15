@@ -103,7 +103,7 @@ class SchedulePage extends StatelessWidget {
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
               backgroundImage: data.avatarUrl == ""
-                  ? new Image.asset(Strings.SCHEDULE_TAB_IMAGES_DK_PROFILE).image
+                  ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
                   : new NetworkImage(
                 data.avatarUrl,
               ),

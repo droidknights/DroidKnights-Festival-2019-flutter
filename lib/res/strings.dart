@@ -1,11 +1,13 @@
 class Strings {
 
   static const String DROID_KNIGHTS = "DroidKnights";
+  static const String IMAGES_DK_PROFILE = "assets/images/dk_profile.png";
 
   // FONT
   static const String FONT_FAMILY_ROBOTO = "Roboto";
 
   // INFO TAB
+  static const String INFO_TAB = "Info";
   static const String INFO_TAB_MAKER = "coex";
   static const String INFO_TAB_MOVE_HOMEPAGE = "홈페이지로 이동";
   static const String INFO_TAB_URL_DROID_KNIGHTS = "https://droidknights.github.io/2019/";
@@ -33,13 +35,16 @@ class Strings {
   static const String INFO_TAB_URL_IMAGE_SPONSOR_PRD = "https://droidknights.github.io/2019/static/media/%ED%97%A4%EC%9D%B4%EB%94%9C%EB%9F%AC.f213d29a.png";
 
   // SCHEDULE TAB
+  static const String SCHEDULE_TAB = "Schedule";
   static const String SCHEDULE_TAB_TRACK1 = "Track1";
   static const String SCHEDULE_TAB_TRACK2 = "Track2";
   static const String SCHEDULE_TAB_TRACK3 = "Track3";
 
   static const String SCHEDULE_TAB_IMAGES_APP_BAR = "assets/images/dk_appbar_title.png";
-  static const String SCHEDULE_TAB_IMAGES_DK_PROFILE = "assets/images/dk_profile.png";
   static const String SCHEDULE_TAB_JSON_TRACK_SCREEN1 = "assets/json/schedule_track1.json";
   static const String SCHEDULE_TAB_JSON_TRACK_SCREEN2 = "assets/json/schedule_track2.json";
   static const String SCHEDULE_TAB_JSON_TRACK_SCREEN3 = "assets/json/schedule_track3.json";
+
+  // SESSION DETAIL DIALOG
+  static const String SESSION_DIALOG_IMAGES_CLOSE = "assets/images/ic_close.png";
 }
