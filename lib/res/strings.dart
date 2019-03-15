@@ -5,6 +5,7 @@ class Strings {
 
   // FONT
   static const String FONT_FAMILY_ROBOTO = "Roboto";
+  static const String FONT_DUNG_GEUN_MO = "DungGeunMo";
 
   // INFO TAB
   static const String INFO_TAB = "Info";

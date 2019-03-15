@@ -37,19 +37,21 @@ class InfoPageState extends State<InfoPage> {
       fontSize: 19.0,
       color: const Color(0xFF77e448),
       fontWeight: FontWeight.w400,
-      fontFamily: Strings.FONT_FAMILY_ROBOTO);
+      height: 1.3,
+      fontFamily: Strings.FONT_DUNG_GEUN_MO);
 
   final TextStyle _subtitleTextStyle = new TextStyle(
       fontSize: 13.0,
       color: const Color(0xFFededed),
       fontWeight: FontWeight.w200,
-      fontFamily: Strings.FONT_FAMILY_ROBOTO);
+      height: 1.5,
+      fontFamily: Strings.FONT_DUNG_GEUN_MO);
 
   final TextStyle _buttonTextStyle = new TextStyle(
       fontSize: 15.0,
       color: const Color(0xFFededed),
       fontWeight: FontWeight.w500,
-      fontFamily: Strings.FONT_FAMILY_ROBOTO);
+      fontFamily: Strings.FONT_DUNG_GEUN_MO);
 
   @override
   Widget build(BuildContext context) {
@@ -110,18 +112,24 @@ class InfoPageState extends State<InfoPage> {
         fontSize: 24.0,
         color: const Color(0xFFFFFFFF),
         fontWeight: FontWeight.w600,
-        fontFamily: Strings.FONT_FAMILY_ROBOTO),
+        height: 1.2,
+        fontFamily: Strings.FONT_DUNG_GEUN_MO),
   );
 
   Widget sectionTitle(String title) => new Text(title, style: _titleTextStyle,);
 
   Widget sectionSubTitle(String title) => new Text(title, style: _subtitleTextStyle,);
 
-  Widget goToHomepage() => new MaterialButton(
-    onPressed: () => _launchURL(Strings.INFO_TAB_URL_DROID_KNIGHTS),
-    color: const Color(0xFF77e448),
-    child: new Text(Strings.INFO_TAB_MOVE_HOMEPAGE, style: _buttonTextStyle),
-  );
+  Widget goToHomepage() =>
+      new Container(
+        margin: const EdgeInsets.symmetric(vertical: 5),
+        padding: const EdgeInsets.only(bottom: 3),
+        child: new MaterialButton(
+          onPressed: () => _launchURL(Strings.INFO_TAB_URL_DROID_KNIGHTS),
+          color: const Color(0xFF77e448),
+          child: new Text(Strings.INFO_TAB_MOVE_HOMEPAGE, style: _buttonTextStyle),
+        ),
+      );
 
   Widget programList() => new SingleChildScrollView(
       scrollDirection: Axis.horizontal,
@@ -153,7 +161,7 @@ class InfoPageState extends State<InfoPage> {
               fontSize: 13.0,
               color: const Color(0xFFededed),
               fontWeight: FontWeight.w600,
-              fontFamily: Strings.FONT_FAMILY_ROBOTO),
+              fontFamily: Strings.FONT_DUNG_GEUN_MO),
         ),
         new Text(
           description,
