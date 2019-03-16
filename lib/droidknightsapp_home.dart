@@ -1,95 +1,78 @@
-import 'package:droidknights/pages/track_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:droidknights/pages/info_page.dart';
+import 'package:droidknights/pages/schedule_page.dart';
+import 'package:droidknights/res/strings.dart';
+import 'package:flutter/material.dart';
 
-class DroidknightsAppHome extends StatefulWidget {
-  @override
-  _DroidknightsAppHomeState createState() => new _DroidknightsAppHomeState();
-}
+import 'bloc/bloc_provider.dart';
+import 'bloc/tab_bloc.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io' show Platform;
 
-class _DroidknightsAppHomeState extends State<DroidknightsAppHome>
-    with TickerProviderStateMixin {
-  TabController _tabController;
-  int _currentIndex = 0;
-  List<Widget> _appbar = [];
-  List<Widget> _children = [];
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = new TabController(length: 4, vsync: this, initialIndex: 0);
-    _appbar.addAll([null, scheduleAppbar()]);
-    _children.addAll([
-      InfoPage(),
-      //PlaceholderWidget(Colors.deepOrange),
-      scheduleBody()
-    ]);
-  }
-
+class DroidknightsAppHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: appBar(),
-        bottomNavigationBar: bottomNavigationBar(),
-        body: _children[_currentIndex]);
+    final _tabBloc = BlocProvider.of<TabBloc>(context);
+    return StreamBuilder(
+        stream: _tabBloc.$bottomTab,
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) return Container();
+          return Platform.isAndroid
+              ? createAndroidWidget(_tabBloc, snapshot)
+              : createIosWidget();
+        });
   }
 
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
+  Widget createAndroidWidget(TabBloc _tabBloc, var snapshot) {
+    return Scaffold(
+        body: bodyPages(snapshot.data),
+        bottomNavigationBar: BottomNavigationBar(
+          onTap: (int index) => _tabBloc.changeBottomTab(index),
+          currentIndex: snapshot.data,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.info),
+              title: Text(Strings.INFO_TAB),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.schedule),
+              title: Text(Strings.SCHEDULE_TAB),
+            ),
+          ],
+        ));
   }
 
-  Widget appBar() => new AppBar(
-    title: Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Image.asset(
-        'assets/images/dk_appbar_title.png',
-        fit: BoxFit.contain,
-        height: 25,
-      )
-    ],),
-    elevation: 0.7,
-    bottom: _appbar[_currentIndex]
-  );
+  Widget bodyPages(index) {
+    switch (index) {
+      case 0:
+        return InfoPage();
+      case 1:
+        return SchedulePage();
+    }
+  }
 
-  Widget bottomNavigationBar() => new BottomNavigationBar(
-    onTap: onTabTapped,
-    currentIndex: _currentIndex,
-    // this will be set when a new tab is tapped
-    items: [
-      BottomNavigationBarItem(
-        icon: new Icon(Icons.info),
-        title: new Text('Info'),
+  Widget createIosWidget() {
+    return CupertinoTabScaffold(
+      backgroundColor: const Color(0xFF112030),
+      tabBar: CupertinoTabBar(
+        backgroundColor: CupertinoColors.lightBackgroundGray,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.info),
+            title: Text('Info'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.clock),
+            title: Text('Schedule'),
+          ),
+        ],
       ),
-      BottomNavigationBarItem(
-        icon: new Icon(Icons.schedule),
-        title: new Text('Schedule'),
-      ),
-    ]
-  );
-
-  Widget scheduleAppbar() {
-    return new TabBar(
-        controller: _tabController,
-        labelColor: new Color(0xff40d225),
-        unselectedLabelColor: Colors.grey,
-        indicatorColor: new Color(0xff40d225),
-        tabs: <Widget>[
-          new Tab(text: "Track1"),
-          new Tab(text: "Track2"),
-          new Tab(text: "Track3"),
-        ]);
-  }
-
-  Widget scheduleBody() {
-    return new Scaffold(
-      body: new TabBarView(controller: _tabController, children: <Widget>[
-        new TrackScreen('assets/json/schedule_track1.json'),
-        new TrackScreen('assets/json/schedule_track2.json'),
-        new TrackScreen('assets/json/schedule_track3.json')
-      ]),
+      tabBuilder: (context, index) {
+        return CupertinoTabView(
+          builder: (context) {
+            return bodyPages(index);
+          },
+        );
+      },
     );
   }
 }
