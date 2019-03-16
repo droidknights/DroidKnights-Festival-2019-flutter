@@ -54,6 +54,15 @@ class InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF112030),
+        centerTitle: true,
+        title: Image.asset(
+          Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
+          fit: BoxFit.fitHeight,
+          height: 25,
+        ),
+      ),
       body: _contentWidget(),
     );
   }
