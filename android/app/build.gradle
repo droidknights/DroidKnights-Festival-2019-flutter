@@ -52,6 +52,9 @@ android {
     }
 
     signingConfigs {
+        debug {
+
+        }
         release {
             keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
@@ -61,6 +64,9 @@ android {
     }
 
     buildTypes {
+        debug {
+
+        }
         release {
             minifyEnabled true
             useProguard true
