@@ -17,7 +17,8 @@ class SchedulePage extends StatelessWidget {
           Tab(text: Strings.SCHEDULE_TAB_TRACK1),
           Tab(text: Strings.SCHEDULE_TAB_TRACK2),
           Tab(text: Strings.SCHEDULE_TAB_TRACK3),
-        ]);
+        ]
+    );
   }
 
   @override
@@ -39,7 +40,9 @@ class SchedulePage extends StatelessWidget {
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN2),
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN3),
               ],
-            )));
+            )
+        )
+    );
   }
 
   Widget trackScreen(String filePath) {
