@@ -32,29 +32,32 @@ class SessionDetailDialog extends ModalRoute<void> {
     Animation<double> secondaryAnimation,
   ) {
     // This makes sure that text and other content follows the material style
-    return Material(
-      type: MaterialType.transparency,
-      // make sure that the overlay content is not cut off
-      child: SafeArea(
-        child: new Stack(
-          children: <Widget>[
-            new Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+    return GestureDetector(
+        child: Material(
+          type: MaterialType.transparency,
+          // make sure that the overlay content is not cut off
+          child: SafeArea(
+            child: new Stack(
               children: <Widget>[
-                new Padding(
-                  padding: const EdgeInsets.all(27.0),
-                  child: new IconButton(
-                    icon: new Image.asset(Strings.SESSION_DIALOG_IMAGES_CLOSE),
-                    iconSize: 24,
-                    onPressed: () => Navigator.pop(context),
-                  ),
+                new Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    new Padding(
+                      padding: const EdgeInsets.all(27.0),
+                      child: new IconButton(
+                        icon: new Image.asset(Strings.SESSION_DIALOG_IMAGES_CLOSE),
+                        iconSize: 24,
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ),
+                  ],
                 ),
+                _buildOverlayContent(context),
               ],
             ),
-            _buildOverlayContent(context),
-          ],
+          ),
         ),
-      ),
+      onTap: () => Navigator.pop(context),
     );
   }
 
@@ -66,44 +69,47 @@ class SessionDetailDialog extends ModalRoute<void> {
         new Center(
           child: new Padding(
             padding: const EdgeInsets.all(27.0),
-            child: new Container(
-              width: double.infinity,
-              decoration: new BoxDecoration(
-                color: Colors.white,
-                borderRadius: new BorderRadius.all(
-                  const Radius.circular(4.0),
+            child: GestureDetector(
+              child: new Container(
+                width: double.infinity,
+                decoration: new BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.all(
+                    const Radius.circular(4.0),
+                  ),
+                ),
+                padding: const EdgeInsets.only(
+                    left: 10.0, right: 10, top: 16, bottom: 35),
+                child: new Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    profileImage,
+                    new Padding(
+                        padding: const EdgeInsets.only(
+                            left: 32.0, right: 32.0, top: 16.0, bottom: 3.0),
+                        child: new Text(
+                          sessionData.title,
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(fontSize: 16.0),
+                        )),
+                    new Text(
+                      sessionData.name,
+                      style: new TextStyle(
+                          color: new Color(0xffa5b495), fontSize: 16.0),
+                    ),
+                    new Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 13.0),
+                        child: new Text(
+                          sessionData.contents.toString(),
+                          style: new TextStyle(
+                              color: new Color(0xff4a4a4a), fontSize: 12.0),
+                        )),
+                    //rating
+                  ],
                 ),
               ),
-              padding: const EdgeInsets.only(
-                  left: 10.0, right: 10, top: 16, bottom: 35),
-              child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  profileImage,
-                  new Padding(
-                      padding: const EdgeInsets.only(
-                          left: 32.0, right: 32.0, top: 16.0, bottom: 3.0),
-                      child: new Text(
-                        sessionData.title,
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(fontSize: 16.0),
-                      )),
-                  new Text(
-                    sessionData.name,
-                    style: new TextStyle(
-                        color: new Color(0xffa5b495), fontSize: 16.0),
-                  ),
-                  new Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0, vertical: 13.0),
-                      child: new Text(
-                        sessionData.contents.toString(),
-                        style: new TextStyle(
-                            color: new Color(0xff4a4a4a), fontSize: 12.0),
-                      )),
-                  //rating
-                ],
-              ),
+              onTap: () => {}
             ),
           ),
         ),
