@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xff000000),
         accentColor: Color(0xff40d225),
         indicatorColor: Color(0xff40d225),
-        primaryColorLight: Color(0xff96ce7e)
+        primaryColorLight: Color(0xff96ce7e),
+        fontFamily: 'DungGeunMo',
       ),
       debugShowCheckedModeBanner: false,
       routes: {
