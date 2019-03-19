@@ -27,13 +27,13 @@ class SchedulePage extends StatelessWidget {
         length: 3,
         child: Scaffold(
             appBar: AppBar(
+                centerTitle: true,
                 title: Image.asset(
                   Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
                   fit: BoxFit.fitHeight,
                   height: 25,
                 ),
-                bottom: scheduleAppbar()
-            ),
+                bottom: scheduleAppbar()),
             body: TabBarView(
               children: <Widget>[
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN1),
@@ -55,14 +55,10 @@ class SchedulePage extends StatelessWidget {
             color: Colors.black,
             child: ListView.builder(
                 itemCount: snapshot.data.length,
-                itemBuilder: (context, i) =>
-                    Column(
-                        children: <Widget>[_itemView(context, snapshot.data[i])
-                        ])
-            ),
+                itemBuilder: (context, i) => Column(
+                    children: <Widget>[_itemView(context, snapshot.data[i])])),
           );
-        }
-    );
+        });
   }
 
   Widget _itemView(context, data) {
@@ -105,8 +101,8 @@ class SchedulePage extends StatelessWidget {
               backgroundImage: data.avatarUrl == ""
                   ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
                   : new NetworkImage(
-                data.avatarUrl,
-              ),
+                      data.avatarUrl,
+                    ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
             Flexible(
@@ -124,8 +120,8 @@ class SchedulePage extends StatelessWidget {
                     ),
                     Text(
                       data.name,
-                      style: TextStyle(
-                          color: Color(0xffa5b495), fontSize: 12.0),
+                      style:
+                          TextStyle(color: Color(0xffa5b495), fontSize: 12.0),
                     ),
                   ],
                 ),
@@ -142,7 +138,8 @@ class SchedulePage extends StatelessWidget {
     return ListTile(
       leading: Text(
         data.time,
-        style: TextStyle(color: Theme.of(context).primaryColorLight, fontSize: 12.0),
+        style: TextStyle(
+            color: Theme.of(context).primaryColorLight, fontSize: 12.0),
       ),
       title: Text(
         data.title,
