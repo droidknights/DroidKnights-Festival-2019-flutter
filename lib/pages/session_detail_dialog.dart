@@ -130,14 +130,15 @@ class SessionDetailDialog extends ModalRoute<void> {
     );
   }
 
-  double avartarSize = 160.0;
+  static const double avatarSize = 160.0;
+  static const double avatarHalfSize = avatarSize / 2;
 
   Widget get profileImage {
     return new Hero(
       tag: sessionData,
       child: new Container(
-        height: avartarSize,
-        width: avartarSize,
+        height: avatarSize,
+        width: avatarSize,
         constraints: new BoxConstraints(),
         decoration: new BoxDecoration(
           shape: BoxShape.circle,
