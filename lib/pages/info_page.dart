@@ -147,12 +147,12 @@ class InfoPageState extends State<InfoPage> {
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            program(Strings.INFO_TAB_TITLE_CODE_REVIEW,
-                Strings.INFO_TAB_TITLE_CODE_REVIEW_CONTENT),
             program(Strings.INFO_TAB_TITLE_CODE_LAB,
                 Strings.INFO_TAB_TITLE_CODE_LAB_CONTENT),
-            program(Strings.INFO_TAB_TITLE_LIVE_QUIZ,
-                Strings.INFO_TAB_TITLE_LIVE_QUIZ_CONTENT),
+            program(Strings.INFO_TAB_TITLE_CODE_REVIEW,
+                Strings.INFO_TAB_TITLE_CODE_REVIEW_CONTENT),
+            program(Strings.INFO_TAB_TITLE_LIGHTENING_TALK,
+                Strings.INFO_TAB_TITLE_LIGHTENING_TALK_CONTENT),
           ]
       )
   );
@@ -202,24 +202,116 @@ class InfoPageState extends State<InfoPage> {
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        new Padding(
-          padding: const EdgeInsets.all(_contentsAllPadding),
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              GestureDetector(
-                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_PRD),
-                child: Text("NO IMAGE", style:_subtitleTextStyle),
-                // child: Image.network(
-                //   Strings.INFO_TAB_URL_IMAGE_SPONSOR_PRD,
-                //   width: 50.0,
-                //   fit: BoxFit.fitWidth,
-                // ),
+        new Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_LINE),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_LINE,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitWidth,
+                ),
               ),
-            ],
-          ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_PRD),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_PRD,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_JETBRAINS),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_JETBRAINS,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitHeight,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_HYPERCONNECT),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_HYPERCONNECT,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_YANOLJA),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_YANOLJA,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_RAINIST),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_RAINIST,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_EBRAIN),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_EBRAIN,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            new Padding(
+              padding: const EdgeInsets.symmetric(horizontal: _contentsAllPadding),
+              child: GestureDetector(
+                onTap: () => _launchURL(Strings.INFO_TAB_URL_SPONSOR_LEZHIN),
+//                child: Text("NO IMAGE", style:_subtitleTextStyle),
+                child: Image.network(
+                  Strings.INFO_TAB_URL_IMAGE_SPONSOR_LEZHIN,
+                  width: 80.0,
+                  height: 80.0,
+                  fit: BoxFit.fitHeight,
+                ),
+              ),
+            ),
+          ],
         ),
       ]
     )
