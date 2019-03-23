@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.droidknights.droidknights">
+    package="com.droidknights.flutterdroidknights">
 
     <!-- The INTERNET permission is required for development. Specifically,
          flutter needs it to communicate with the running application
@@ -16,6 +16,9 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="droidknights"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+          android:name="com.google.android.geo.API_KEY"
+          android:value="AIzaSyD5W3yb4jxvq7fjVl-QUOc_f2zSSZ9SWwU" />
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -34,12 +37,6 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
-            <meta-data
-              android:name="com.google.android.geo.API_KEY"
-              android:value="MAP_KEY" />
-
-
         </activity>
     </application>
 </manifest>

@@ -1,4 +1,4 @@
-package com.droidknights.droidknights
+package com.droidknights.flutterdroidknights
 
 import android.os.Bundle
 
