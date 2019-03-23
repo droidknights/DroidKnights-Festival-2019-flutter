@@ -18,17 +18,17 @@
   {
     "type": 1,
     "name": "김성일",
-    "title": "안드로이드 TDD 적용기",
+    "title": "Android TDD 적용기",
     "time": "10:10",
-    "avatarUrl": "",
-    "contents": "앱 개발을 하며 느리고 반복적인 디바이스 테스트에 회의를 느끼고, 테스트를 도입하려고 마음먹었습니다.\n유틸성 클래스의 작은 단위테스트 작성부터 TDD를 적용하는 것을 목표로 수많은 시행착오를 겪었으며,\n그 결과, 최근 실무 프로젝트의 대부분을 TDD로 개발하였습니다.\n이번 프로젝트의 한 부분을 실례로 제시하며, 안드로이드 앱 개발 프로세스에 TDD를 적용하면서 느끼고 경험했던 모든 것을 공유합니다.\n\n* TDD란?\n* TDD를 위한 준비\n* 비즈니스로직 - TDD로 개발하기\n* UI - TDD로 개발하기"
+    "avatarUrl": "https://drive.google.com/file/d/1wkWfJtjuNvb5Xd2O_3z9DetlqsWOPSAl/view?usp=sharing",
+    "contents": "앱 개발을 하며 느리고 반복적인 디바이스 테스트에 회의를 느끼고, 테스트를 도입하려고 마음먹었습니다. 단위테스트 작성부터 TDD를 적용하는 것을 목표로 많은 시행착오를 겪었으며, 최근 실무 프로젝트의 대부분을 TDD로 개발하였습니다. 이번 프로젝트의 일부를 실례로 제시하며, 안드로이드 앱 개발과정에 TDD를 적용하면서 느끼고 경험했던 것을 공유합니다."
   },
   {
     "type": 1,
     "name": "장선옥",
-    "title": "Android Project with Multi Module",
+    "title": "Android Project with Multiple Modules",
     "time": "11:10",
-    "avatarUrl": "",
+    "avatarUrl": "https://avatars0.githubusercontent.com/u/8149379?s=460&v=4",
     "contents": "여러 개의 모듈을 사용해서 안드로이드 프로젝트를 개발하고 있는 이유와, 모듈화 된 앱 개발의 장단점, 모듈화 방법, 프로젝트 관리법 등에 대해 소개합니다."
   },
   {
@@ -36,16 +36,16 @@
     "name": "황성현",
     "title": "Clean Architecture (in Android) Revised",
     "time": "11:55",
-    "avatarUrl": "",
-    "contents": "2017년 드로이드 나이츠에서 진행했던 [Clean Architecture in Android] 발표에서 지금과 생각이 달라진 내용, 뉘앙스로 인해 오해를 낳았던 내용 등을 바로잡는 세션을 생각 중입니다.\n\n1) Clean Architecture의 radical한 정의 및 요소\n2) 2017년 본인의 발표 및 기존 clean architecture 관련 자료들 검토 및 의견 전달\n3) 위 피드백을 바탕으로 제안하는 clean architecture의 구현체 형태 제안"
+    "avatarUrl": "https://avatars0.githubusercontent.com/u/8149378",
+    "contents": "Droid Knights 2017 발표 중 하나였던 [Clean Architecture in Android] 발표를 2019년의 시각으로 다시 재구성을 시도합니다. Android라는 콘텍스트를 조금 벗어나 Clean Architecture의 문제의식과 이를 구현한 코드 여럿을 함께 살펴보고 얘기를 나눕니다."
   },
   {
     "type": 1,
     "name": "김현",
-    "title": "모바일에서 오프라인 모드 적용 사례",
+    "title": "오프라인과 앱 서비스",
     "time": "12:55",
-    "avatarUrl": "",
-    "contents": "1. 일반적인 앱 개발 방법 : 보통 REST API 를 통한 데이터 취득 및 화면 갱신을 기반으로 앱을 개발하고 있음\n2. 오프라인 모드가 필요한 이유 : 네트워크 통신 실패 시에 대한 처리, 응답 성능의 향상등의 요구가 발생하게 됨\n3. 현재 적용된 앱들의 사례 : 여러 회사에서 적용한 오프라인 스토리지를 이용한 대응 사례들 공유\n4. 나의 적용 사례 공유 : 로컬 스토리지를 이용한 오프라인 모드를 구축하고 적용하기로 함./ 로컬 스토리지를 참조한 화면 갱신으로 반응성 향상 및 서버와의 통신을 통해 Sync를 정책에 따라 실행함으로써 신뢰성 확보 샘플 코드 공유 및 구조 설명 (클린 아키텍쳐의 일부로 적용함 )\n5. Q&A"
+    "avatarUrl": "https://photos.app.goo.gl/7AwTHg6yaaNMPe919",
+    "contents": "인터넷 끊김, 속도저하에 따라 네트워크 없이 서비스를 안정적으로 제공할 방법에 대하여 고민하였습니다. 메모리/디스크 캐시를 이용한 데이터 임시저장, 서버 데이터가 필요없는 서비스에 대한 오프라인 서비스 모드 제공, 오프라인 스토리지에 서버 데이터를 저장하고 동기화 하는 방법 등, 이 과정에서 겪은 문제점과 해결방법 그리고 발전 방향에 대해 공유합니다."
   },
   {
     "type": 0,
@@ -60,15 +60,15 @@
     "name": "강사룡",
     "title": "안드로이드 아키텍처 총정리",
     "time": "15:00",
-    "avatarUrl": "",
-    "contents": "당신의 아키텍처, 뭔가 잘못된 것 같은 느낌에 시달리고 있지는 않나요? MVP부터 MVVM, Flux 그리고 클린 아키텍처까지 best practice를 중심으로 현업에서 어떤 아키텍처를 적용할 것인가에 대해, 그리고 아키텍처 관점에서 의존성 주입, Rx, 코루틴, 멀티 모듈 등등의 기술을 어떻게 적용할 수 있을지, 2018년에 이어 더욱 깊은 내용으로 다뤄봅니다."
+    "avatarUrl": "https://www.dropbox.com/s/cshhhpdo4b2kh5y/IMG_2975.png?dl=0",
+    "contents": "당신의 아키텍처, 뭔가 잘못된 것 같은 느낌에 시달리고 있지는 않나요? MVP부터 MVVM, Flux 그리고 클린 아키텍처까지 Best Practice를 중심으로 현업에서 어떤 아키텍처를 적용할 것인가에 대해, 그리고 아키텍처 관점에서 의존성 주입, Rx, 코루틴, 멀티모듈 등의 기술을 어떻게 적용할 수 있을지, 2018년에 이어 더욱 깊은 내용으로 다뤄봅니다."
   },
   {
     "type": 1,
-    "name": "박민석",
-    "title": "PWA 품은 안드로이드 웹뷰 경험기",
+    "name": "박민석, 유진의",
+    "title": "PWA 를 이용한 안드로이드 웹뷰 성능 개선기",
     "time": "16:00",
-    "avatarUrl": "",
+    "avatarUrl": "https://bit.ly/2tYiwyg",
     "contents": "웹뷰를 포함한 앱이 어떻게 하면 사용자에게 더 빠른 속도로 좋은 경험을 전달할 수 있을까요? PWA와 함께 기존 웹뷰의 한계를 극복하고 사용자 경험을 한층 더 발전시킨 경험을 공유합니다."
   },
   {
@@ -76,15 +76,15 @@
     "name": "남반석",
     "title": "SVC 패턴으로 앱 쉽게 만들기",
     "time": "16:45",
-    "avatarUrl": "",
-    "contents": "안드로이드 앱 개발에 불편함을 느껴 \"어떻게 더 쉽게 코드를 짤 수 있을까?\"를 고민했습니다. 발표에서는 이 고민 포인트를 공유하고 SVC 패턴의 탄생 배경과 다른 패턴들과의 차이를 비교하고, SVC를 통해서 스펙이 많아 복잡한 화면을 어떻게 나눠서 유지보수를 쉽게 할 수 있을지, RecyclerView에서 ViewModel활용법 등 노하우를 공유합니다."
+    "avatarUrl": "https://cdn1.imggmi.com/uploads/2019/2/27/3729a48ce31876e3ec87c284e060b992-full.png",
+    "contents": "\"어떻게 더 쉽게 코드를 짤 수 있을까?\"를 고민했습니다. 고민 포인트를 공유하고 SVC 패턴의 탄생 배경과 다른 패턴들과의 차이를 비교하고, SVC를 통해서 스펙이 많아 복잡한 화면을 어떻게 나눠서 유지보수를 쉽게 할 수 있을지, RecyclerView에서 ViewModel활용법 등 노하우를 공유합니다."
   },
   {
     "type": 1,
     "name": "박미륵",
     "title": "Advanced MVP",
     "time": "17:45",
-    "avatarUrl": "",
-    "contents": "MVP 패턴을 사용하면서 겪었던 문제점과 이를 개선하기 위해 시도한 다양한 방법들을 소개하고 싶습니다."
+    "avatarUrl": "https://cdn.banksalad.com/rainist/member/mireuk_profile.png",
+    "contents": "MVP 패턴을 사용하면서 겪었던 어려움에 대해서 이야기하고 이를 개선하기 위해 했던 고민과 방법들에 대해서 이야기하고자 합니다."
   }
 ]

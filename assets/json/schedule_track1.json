@@ -20,16 +20,16 @@
     "name": "노재춘",
     "title": "RxJava 구독과 구독 제거 메커니즘 설명",
     "time": "10:10",
-    "avatarUrl": "",
+    "avatarUrl": "https://postfiles.pstatic.net/MjAxOTAzMDRfMTU5/MDAxNTUxNjg1NDk0Mjk4.pZTfcj6Ffr562KxtU_uHYhAA5jWmghIY_CyLcJW5xiog.b_BiOszNZr7Gcc_mKvnFlNPFylAQexcmi27q6W_33B0g.JPEG.hanuldt/SE-abe5ce07-4c48-4f09-9299-731df1da6440.jpg?type=w580",
     "contents": "RxJava의 구독과 구독 제거 메커니즘을 이해하고 정확하게 이를 적용하는 방법을 얘기합니다."
   },
   {
     "type": 1,
     "name": "하동현",
-    "title": "지금까지 이런 간단한 Logic 처리는 없었다. 이것은 Rx인가, UI 이벤트인가?",
+    "title": "지금까지 이런 간단한 Logic 처리는 없었다 이것은 Rx 인가, UI 이벤트인가? 네, RxBinding입니다.",
     "time": "11:10",
-    "avatarUrl": "",
-    "contents": "최근 앱 화면을 보면 한 화면에 다양한 UI 가 존재하며 각 UI에 대하여 복잡한 Logic 이 있습니다. Logic 은 요구 사항에 따라 쉽게 변하거나 복잡해질 수 있으며 복잡한 Logic 을 처리하다 보면 Logic 이 엉키게 되어 유지 보수하기 어렵게 됩니다. 그러나 RxBinding 라이브러리를 이용할 경우 중복 코드 처리 및 UI 이벤트 조합 등 다양한 방법으로 보다 손쉽게 해당 문제점을 해결할 수 있습니다. 이 세션에서는 RxBinding 라이브러리의 기본적인 사용 방법뿐만 아니라 실제 프로덕션에 적용해봤던 경험을 바탕으로 다양한 예시를 들어 설명할 예정입니다."
+    "avatarUrl": "https://drive.google.com/file/d/17XUDJDFep7JGtWq71wPPnYVzFU8VY1Gk/view?usp=sharing",
+    "contents": "한 화면에 다양한 UI가 존재하며 각 UI마다 복잡한 로직이 있으며, 처리하다 보면 엉키게 되어 유지보수를 하기 어렵게 됩니다.  RxBinding을 이용하면 손쉽게 중복코드를 처리하고 UI 이벤트를 조합하여 문제를 해결할 수 있습니다.  RxBinding의 기본 사용방법과 프로덕트에 적용한 경험을 다양한 예시와 함께 설명합니다."
   },
   {
     "type": 1,
@@ -37,14 +37,14 @@
     "title": "코틀린 디자인 패턴",
     "time": "11:55",
     "avatarUrl": "",
-    "contents": "코틀린은 언어 자체에서 디자인 패턴을 보다 효과적으로 반영할 수 있도록 설계되어 있습니다. 이번 발표에서는 전통적인 GoF의 23가지 디자인 패턴이 코틀린에서 어떻게 적용될 수 있는지 살펴보고, 더 효율적인 코드를 작성하는 방법에 대해 이야기하려 합니다. 특히 각 패턴들이 자바로는 어떻게 구현되었는지 비교해 보며 코틀린 언어에 대한 이해도를 높이는 계기가 되었으면 합니다."
+    "contents": "코틀린은 언어 자체에서 디자인 패턴을 효과적으로 반영할 수 있도록 설계되어 있습니다. 전통적인 GoF의 23가지 디자인 패턴이 코틀린에서 어떻게 적용될 수 있는지 살펴보고, 더 효율적인 코드를 작성하는 방법에 대해 이야기 합니다. 특히 각 패턴들이 자바로는 어떻게 구현되었는지 비교해 보며 코틀린 언어에 대한 이해도를 높이는 계기가 되었으면 합니다."
   },
   {
     "type": 1,
     "name": "박상권",
     "title": "Kotlin 꼭 해야하나요?",
     "time": "12:55",
-    "avatarUrl": "",
+    "avatarUrl": "https://www.dropbox.com/s/i5evo2188d40s28/1550711591729.png?dl=0",
     "contents": "- Kotlin이 공식언어로 지정된지 2년이 됐음에도 요즘 각종 안드로이드 커뮤니티에서 제일 많이 나오는 질문은 'Kotlin 꼭 해야하나요?' 입니다.\n- Java코드를 Kotlin코드로 코딩하기 시작하면서 느꼈던 Java코드와 Kotlin을 비교했을때의 특징과 장점들에 대해서 이야기 합니다.\n- Kotlin을 학습하려고 하는 분들을 위한 각종 팁들과 삽질경험들을 공유합니다."
   },
   {
@@ -60,31 +60,31 @@
     "name": "정동진",
     "title": "코루틴 너 은행에서 뭐하니?",
     "time": "15:00",
-    "avatarUrl": "",
-    "contents": "1. 코루틴에 대한 간략한 설명\na. 어느곳에서 사용할수 있는가?\nb. 어떤 강점을 가지고 있는가?\n2. 샘플 학습과 안드로이드 적용\na. 샘플 코드와 학습에 대한 노하우\nb. 샘플 코드와 안드로이드 적용시의 차이점\n3. 실무코드에 적용 및 문제점 및 적용법\n4. 적용된 소스코드 설명\n5. 최적화된 코드 인가?에 대한 고민"
+    "avatarUrl": "https://cdn-images-1.medium.com/max/800/1*IhzasZVTtWbSkVCklSyH7w.jpeg",
+    "contents": "1. 코루틴을 어느 곳에서 사용하고, 어떤 강점을 갖는지에 대한 간략한 설명\n2. 샘플 학습과 안드로이드 적용\n3. 실무코드에 적용 및 문제점 및 적용법\n4. 적용된 소스코드 설명\n5. 최적화된 코드에 대한 고민"
   },
   {
     "type": 1,
     "name": "권태환",
     "title": "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?",
     "time": "16:00",
-    "avatarUrl": "",
-    "contents": "코루틴을 쓰는건 다양하게 소개되고있다. 코루틴을 적용하는것도 어렵지 않게 사용할 수 있는데, 그러면 코루틴 내에서 발생하는 오류를 어떻게 캐치하고 안전하게 사용할 수 있을까? 코루틴 내에서 발생하는 오류를 안전하게 처리하는 방법을 소개하고, 코루틴으로 라이브러리 형태로 접근 하는 방법을 소개하려고 한다.\n- 코루틴 소개\n- 코루틴 사용중 발생하는 오류 처리 방법을 알아본다\n- 코루틴 라이브러리를 직접 만들고 활용해보는 방법을 알아본다\n- 실제 적용 사례를 함께 소개한다"
+    "avatarUrl": "https://photos.app.goo.gl/JMWyxaUz4RSwpppo9",
+    "contents": "코루틴은 어렵지 않게 적용할 수 있다. 그러면 코루틴 내에서 발생하는 오류를 어떻게 캐치하고 안전하게 사용할 수 있을까? 코루틴 내에서 발생하는 오류를 안전하게 처리하는 방법을 소개하고, 코루틴으로 라이브러리 형태로 접근 하는 방법을 소개하려고 한다.\n- 코루틴 소개\n- 코루틴 사용 중 발생하는 오류 처리 방법을 알아본다\n- 코루틴 라이브러리를 직접 만들고 활용해보는 방법을 알아본다\n- 실제 적용 사례를 함께 소개한다"
   },
   {
     "type": 1,
     "name": "정현지",
     "title": "Dagger vs Koin 무엇이 좋을까요?",
     "time": "16:45",
-    "avatarUrl": "",
-    "contents": "1. DI란 무엇일까?\n2. Dagger란 무엇일까?\n3. Koin란 무엇일까?\n4. 기본적인 두개의 기술에 대한 예시를 들면서 공통점과 차이점은 무엇일까?\n5. 본론\n- 이렇게 사용해 보자( 예시 )\n- Dagger / Koin 적용해보기\n- 무엇이 우리 프로젝트에 더 어울릴까?\n- DI 를 프로젝트에 적용했을 때 장단점은 무엇이 있을까?\n- DI를 공부하고 이렇게 적용하면서 우리가 얻고자 하는 것이 무엇 일까?\n6. 마무리"
+    "avatarUrl": "https://drive.google.com/file/d/1UnMNRAy81WFIuLP5-65X0LEaXIHufeda/view?usp=sharing",
+    "contents": "1. DI란 무엇일까?\n2. Dagger란 무엇일까 ?\n3. Koin란 무엇일까 ?\n4. 기본적인 두개의 기술에 대한 예시를 들면서 공통점과 차이점은 무엇일까?\n5. 본론\n- 둘의 차이점 비교\n- DI 를 적용했을 때 장단점은?\n- DI를 공부하고 이렇게 적용하면서 우리가 얻고자 하는 것은?"
   },
   {
     "type": 1,
     "name": "김범준",
-    "title": "Release ViewPager2!",
+    "title": "ViewPager2 설레발 치기!",
     "time": "17:45",
-    "avatarUrl": "",
-    "contents": "최근 기존에 이야기만 무성하던 ViewPager2가 alpha 버전으로. 배포되었다는 소식 들으셨나요?. 아직 알파 버전이기는 하지만 왜 기존 ViewPager 대신 ViewPager2를 업데이트 했는지 실제 코드 변화는 어떻게 될지 함께 이야기 해봅시다."
+    "avatarUrl": "https://drive.google.com/open?id=1miEdK1RtxMcPgCqm9caPkkcd-WclmQ0p",
+    "contents": "아직 알파 단계인 ViewPager2에 대하여 이야기 하고자 합니다. 왜 ViewPager2가 나온 걸까요? 어떤 유용한 기능들이 추가 되었는지, 기존 ViewPager를 사용 할 때와 어떤 차이점들이 있는지등을 내부 구현 코드와 예시를 적절히 섞어 설명드리려 합니다."
   }
 ]
