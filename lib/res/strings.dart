@@ -13,6 +13,7 @@ class Strings {
   static const String INFO_TAB_MOVE_HOMEPAGE = "홈페이지로 이동";
   static const String INFO_TAB_URL_DROID_KNIGHTS = "https://droidknights.github.io/2019/";
   static const String INFO_TAB_MAIN_TITLE = "오직 안드로이드 개발자들을 위한 컨퍼런스! 드로이드나이츠 2019";
+  static const String INFO_TAB_APPBAR_TITLE = "CONFERENCE INTRODUCTION";
 
   static const String INFO_TAB_SECTION_TITLE_DROID_KNIGHTS = "DROID KNIGHTS 2019";
   static const String INFO_TAB_SECTION_TITLE_PROGRAM = "PROGRAM";
@@ -22,10 +23,12 @@ class Strings {
   static const String INFO_TAB_SECTION_SUB_TITLE_INTRO2 = "2019 드로이드 나이츠는 세션 이외의 다양한 프로그램을 준비하고 있습니다.";
   static const String INFO_TAB_SECTION_SUB_TITLE_LOCATION = "장소 : 코엑스 E홀 / 서울특별시 강남구 영동대로 513 (삼성동, 코엑스)";
 
+  static const String INFO_TAB_PROGRAM_IMG = "assets/images/dk_program.png";
+
   static const String INFO_TAB_TITLE_CODE_REVIEW = "코드리뷰";
   static const String INFO_TAB_TITLE_CODE_REVIEW_CONTENT = "나의 코드를 간략히 소개하고,\n다른 개발자들에게 리뷰를 받습니다.\n리뷰 과정 참관도 가능합니다.";
   static const String INFO_TAB_TITLE_CODE_LAB = "코드랩";
-  static const String INFO_TAB_TITLE_CODE_LAB_CONTENT = "4가지 flutter 튜토리얼 코드를\n각자 학습하며,궁금한 부분이 생기면\n도움을 요청할 수 있습니다. (노트북 지참)";
+  static const String INFO_TAB_TITLE_CODE_LAB_CONTENT = "4가지 flutter 튜토리얼 코드를\n각자 학습하며, 궁금한 부분이 생기면\n도움을 요청할 수 있습니다. (노트북 지참)";
   static const String INFO_TAB_TITLE_LIVE_QUIZ = "실시간 퀴즈쇼";
   static const String INFO_TAB_TITLE_LIVE_QUIZ_CONTENT = "당신의 개발력을 뽐내보세요!\n푸짐한 상품이 함께합니다.";
   static const String INFO_TAB_TITLE_LIGHTENING_TALK = "라이트닝 토크";
@@ -53,6 +56,7 @@ class Strings {
 
 
   // SCHEDULE TAB
+  static const String SCHEDULE_TAB_APPBAR_TITLE = "SCHEDULE";
   static const String SCHEDULE_TAB = "Schedule";
   static const String SCHEDULE_TAB_TRACK1 = "Track1";
   static const String SCHEDULE_TAB_TRACK2 = "Track2";

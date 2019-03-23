@@ -1,3 +1,4 @@
+import 'package:droidknights/pages/info_ios_page.dart';
 import 'package:droidknights/pages/info_page.dart';
 import 'package:droidknights/pages/schedule_page.dart';
 import 'package:droidknights/res/strings.dart';
@@ -44,10 +45,11 @@ class DroidknightsAppHome extends StatelessWidget {
   Widget bodyPages(index) {
     switch (index) {
       case 0:
-        return InfoPage();
+        return Platform.isAndroid ? InfoPage() : InfoIosPage();
       case 1:
         return SchedulePage();
     }
+    return null;
   }
 
   Widget createIosWidget() {
@@ -58,11 +60,11 @@ class DroidknightsAppHome extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.info),
-            title: Text('Info'),
+            title: Text(Strings.INFO_TAB),
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.clock),
-            title: Text('Schedule'),
+            title: Text(Strings.SCHEDULE_TAB),
           ),
         ],
       ),
