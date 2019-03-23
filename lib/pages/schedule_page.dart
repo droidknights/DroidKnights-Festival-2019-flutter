@@ -3,6 +3,7 @@ import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/pages/session_detail_dialog.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'dart:io' show Platform;
 
 class SchedulePage extends StatelessWidget {
@@ -28,7 +29,14 @@ class SchedulePage extends StatelessWidget {
       height: 25,
     );
 
-  Widget iosAppBarTitle() => Text(Strings.SCHEDULE_TAB_APPBAR_TITLE);
+  Widget iosAppBarTitle() =>
+      Text(
+          Strings.SCHEDULE_TAB_APPBAR_TITLE,
+          style: new TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.w600,
+          ),
+      );
 
   @override
   Widget build(BuildContext context) {

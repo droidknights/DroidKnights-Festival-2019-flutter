@@ -118,11 +118,11 @@ class InfoPageState extends State<InfoPage> {
   Widget mainTitle(String title) => new Text(
     title,
     style: new TextStyle(
-        fontSize: 24.0,
-        color: const Color(0xFFFFFFFF),
-        fontWeight: FontWeight.w600,
-        height: 1.2,
-        fontFamily: Strings.FONT_DUNG_GEUN_MO),
+      fontSize: 24.0,
+      color: const Color(0xFFFFFFFF),
+      fontWeight: FontWeight.w600,
+      height: 1.2,
+      fontFamily: Strings.FONT_DUNG_GEUN_MO),
   );
 
   Widget sectionTitle(String title) => new Text(title, style: _titleTextStyle,);

@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:droidknights/const/route.dart';
 import 'package:droidknights/util/animation.dart';
 import 'package:flutter/material.dart';
+import 'dart:io' show Platform;
 
 const NUMBER_OF_STARS = 30;
 
@@ -82,19 +83,27 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
                       ],
                     ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      _buildStar(),
-                      _buildLogo(),
-                      _buildGraphic(),
-                    ],
-                  ),
+                  child: _splashImages(),
                 )
             ),
       );
+
+  Widget _splashImages() {
+    if(Platform.isAndroid) {
+      return Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _buildStar(),
+          _buildLogo(),
+          _buildGraphic(),
+        ],
+      );
+    } else {
+      return Container();
+    }
+  }
 
   Widget _buildStar() =>
       Opacity(

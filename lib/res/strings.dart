@@ -8,7 +8,7 @@ class Strings {
   static const String FONT_DUNG_GEUN_MO = "DungGeunMo";
 
   // INFO TAB
-  static const String INFO_TAB = "Info";
+  static const String INFO_TAB = "Infomation";
   static const String INFO_TAB_MAKER = "coex";
   static const String INFO_TAB_MOVE_HOMEPAGE = "홈페이지로 이동";
   static const String INFO_TAB_URL_DROID_KNIGHTS = "https://droidknights.github.io/2019/";

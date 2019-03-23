@@ -57,14 +57,18 @@ class InfoIosPageState extends State<InfoIosPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF112030),
-        centerTitle: true,
-        title: new Text(
-            Strings.INFO_TAB_APPBAR_TITLE
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF112030),
+          centerTitle: true,
+          title: new Text(
+            Strings.INFO_TAB_APPBAR_TITLE,
+            style: new TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ),
-      ),
-      body: _contentWidget()
+        body: _contentWidget()
     );
   }
 
