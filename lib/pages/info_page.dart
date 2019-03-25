@@ -56,16 +56,28 @@ class InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF112030),
-        centerTitle: true,
-        title: Image.asset(
-          Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
-          fit: BoxFit.fitHeight,
-          height: 25,
-        ),
+      backgroundColor: const Color(0xFF112030),
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => [
+          SliverAppBar(
+              backgroundColor: const Color(0xFF112030),
+              centerTitle: true,
+              title: Image.asset(
+                Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
+                fit: BoxFit.fitHeight,
+                height: 25,
+              ),
+              pinned: true,
+              floating: true,
+              expandedHeight: 450,
+              flexibleSpace: FlexibleSpaceBar(
+                collapseMode: CollapseMode.parallax,
+                background: imageBanner(),
+              )
+          )
+        ],
+        body: _contentWidget(),
       ),
-      body: _contentWidget(),
     );
   }
 
@@ -80,7 +92,6 @@ class InfoPageState extends State<InfoPage> {
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            imageBanner(),
             mainTitle(Strings.INFO_TAB_MAIN_TITLE),
             sectionTopPadding(),
             sectionTitle(Strings.INFO_TAB_SECTION_TITLE_DROID_KNIGHTS),
@@ -103,13 +114,23 @@ class InfoPageState extends State<InfoPage> {
   }
 
   Widget imageBanner() => new Stack(children: <Widget>[
-    new Image.asset(
-      Strings.INFO_TAB_IMAGES_PATH_DK_MAIN_GRAPHIC,
-      fit: BoxFit.fitWidth,
+    new Positioned(
+      left: 5,
+      bottom: 30,
+      right: 5,
+      child: new Image.asset(
+        Strings.INFO_TAB_IMAGES_PATH_DK_MAIN_GRAPHIC,
+        fit: BoxFit.fitWidth,
+      ),
     ),
-    new Image.asset(
-      Strings.INFO_TAB_IMAGES_PATH_DK_TITLE,
-      fit: BoxFit.fitWidth,
+    new Positioned(
+      left: 5,
+      top: 150,
+      right: 5,
+      child: new Image.asset(
+        Strings.INFO_TAB_IMAGES_PATH_DK_TITLE,
+        fit: BoxFit.fitWidth,
+      ),
     ),
   ]);
 

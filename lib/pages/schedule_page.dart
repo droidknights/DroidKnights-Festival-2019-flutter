@@ -9,7 +9,16 @@ class SchedulePage extends StatelessWidget {
   static final int ITEMVIEW_TYPE_SESSTION = 1;
 
   Widget scheduleAppbar() {
-    return TabBar(
+    return SliverAppBar(
+      centerTitle: true,
+      title: Image.asset(
+        Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
+        fit: BoxFit.fitHeight,
+        height: 25,
+      ),
+      pinned: true,
+      floating: true,
+      bottom: TabBar(
         labelColor: Color(0xff40d225),
         unselectedLabelColor: Colors.grey,
         indicatorColor: Color(0xff40d225),
@@ -17,7 +26,8 @@ class SchedulePage extends StatelessWidget {
           Tab(text: Strings.SCHEDULE_TAB_TRACK1),
           Tab(text: Strings.SCHEDULE_TAB_TRACK2),
           Tab(text: Strings.SCHEDULE_TAB_TRACK3),
-        ]
+        ],
+      ),
     );
   }
 
@@ -26,21 +36,18 @@ class SchedulePage extends StatelessWidget {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
-            appBar: AppBar(
-                centerTitle: true,
-                title: Image.asset(
-                  Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
-                  fit: BoxFit.fitHeight,
-                  height: 25,
-                ),
-                bottom: scheduleAppbar()),
+          body: NestedScrollView(
+            headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => [
+              scheduleAppbar(),
+            ],
             body: TabBarView(
               children: <Widget>[
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN1),
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN2),
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN3),
               ],
-            )
+            ),
+          ),
         )
     );
   }
@@ -54,6 +61,7 @@ class SchedulePage extends StatelessWidget {
           return Container(
             color: Colors.black,
             child: ListView.builder(
+                padding: new EdgeInsets.only(bottom: 30),
                 itemCount: snapshot.data.length,
                 itemBuilder: (context, i) => Column(
                     children: <Widget>[_itemView(context, snapshot.data[i])])),
