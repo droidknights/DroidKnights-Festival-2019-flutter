@@ -11,7 +11,6 @@
 
 | info | timetable | detail |
 |---|---|---|
-| ![Screen Shot-main](https://user-images.githubusercontent.com/7722921/54213921-98700f80-4528-11e9-919a-3146fd9a07d0.png) | ![Screen Shot-session](https://user-images.githubusercontent.com/7722921/54214014-cbb29e80-4528-11e9-9687-f7afd5571086.png) | ![Screen Shot-session-detail](https://user-images.githubusercontent.com/7722921/54214075-e7b64000-4528-11e9-9f78-f338336dfd87.png) |
 
 - 크게 두 개의 하단 메뉴로 구성 (info/schedule)
 - 서버는 사용하지 않고, 로컬에 있는 데이터로 표시합니다.

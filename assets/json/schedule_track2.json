@@ -18,34 +18,34 @@
   {
     "type": 1,
     "name": "김성일",
-    "title": "안드로이드 TDD 적용기",
+    "title": "Android TDD 적용기",
     "time": "10:10",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://drive.google.com/file/d/1wkWfJtjuNvb5Xd2O_3z9DetlqsWOPSAl/view?usp=sharing",
+    "contents": "앱 개발을 하며 느리고 반복적인 디바이스 테스트에 회의를 느끼고, 테스트를 도입하려고 마음먹었습니다. 단위테스트 작성부터 TDD를 적용하는 것을 목표로 많은 시행착오를 겪었으며, 최근 실무 프로젝트의 대부분을 TDD로 개발하였습니다. 이번 프로젝트의 일부를 실례로 제시하며, 안드로이드 앱 개발과정에 TDD를 적용하면서 느끼고 경험했던 것을 공유합니다."
   },
   {
     "type": 1,
     "name": "장선옥",
-    "title": "Android Project with Multi Module",
+    "title": "Android Project with Multiple Modules",
     "time": "11:10",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://avatars0.githubusercontent.com/u/8149379?s=460&v=4",
+    "contents": "여러 개의 모듈을 사용해서 안드로이드 프로젝트를 개발하고 있는 이유와, 모듈화 된 앱 개발의 장단점, 모듈화 방법, 프로젝트 관리법 등에 대해 소개합니다."
   },
   {
     "type": 1,
-    "name": "황성현",
-    "title": "Clean Architecture (in Android) Revised",
+    "name": "남상균",
+    "title": "코틀린 디자인 패턴",
     "time": "11:55",
     "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "contents": "코틀린은 언어 자체에서 디자인 패턴을 효과적으로 반영할 수 있도록 설계되어 있습니다. 전통적인 GoF의 23가지 디자인 패턴이 코틀린에서 어떻게 적용될 수 있는지 살펴보고, 더 효율적인 코드를 작성하는 방법에 대해 이야기 합니다. 특히 각 패턴들이 자바로는 어떻게 구현되었는지 비교해 보며 코틀린 언어에 대한 이해도를 높이는 계기가 되었으면 합니다."
   },
   {
     "type": 1,
     "name": "김현",
-    "title": "모바일에서 오프라인 모드 적용 사례",
+    "title": "오프라인과 앱 서비스",
     "time": "12:55",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://photos.app.goo.gl/7AwTHg6yaaNMPe919",
+    "contents": "인터넷 끊김, 속도저하에 따라 네트워크 없이 서비스를 안정적으로 제공할 방법에 대하여 고민하였습니다. 메모리/디스크 캐시를 이용한 데이터 임시저장, 서버 데이터가 필요없는 서비스에 대한 오프라인 서비스 모드 제공, 오프라인 스토리지에 서버 데이터를 저장하고 동기화 하는 방법 등, 이 과정에서 겪은 문제점과 해결방법 그리고 발전 방향에 대해 공유합니다."
   },
   {
     "type": 0,
@@ -57,34 +57,34 @@
   },
   {
     "type": 1,
-    "name": "강사룡",
-    "title": "안드로이드 아키텍처 총정리",
+    "name": "정동진",
+    "title": "코루틴 너 은행에서 뭐하니?",
     "time": "15:00",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://cdn-images-1.medium.com/max/800/1*IhzasZVTtWbSkVCklSyH7w.jpeg",
+    "contents": "1. 코루틴을 어느 곳에서 사용하고, 어떤 강점을 갖는지에 대한 간략한 설명\n2. 샘플 학습과 안드로이드 적용\n3. 실무코드에 적용 및 문제점 및 적용법\n4. 적용된 소스코드 설명\n5. 최적화된 코드에 대한 고민"
   },
   {
     "type": 1,
-    "name": "박민석",
-    "title": "PWA 품은 안드로이드 웹뷰 경험기",
+    "name": "박민석, 유진의",
+    "title": "PWA 를 이용한 안드로이드 웹뷰 성능 개선기",
     "time": "16:00",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://bit.ly/2tYiwyg",
+    "contents": "웹뷰를 포함한 앱이 어떻게 하면 사용자에게 더 빠른 속도로 좋은 경험을 전달할 수 있을까요? PWA와 함께 기존 웹뷰의 한계를 극복하고 사용자 경험을 한층 더 발전시킨 경험을 공유합니다."
   },
   {
     "type": 1,
     "name": "남반석",
     "title": "SVC 패턴으로 앱 쉽게 만들기",
     "time": "16:45",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://cdn1.imggmi.com/uploads/2019/2/27/3729a48ce31876e3ec87c284e060b992-full.png",
+    "contents": "\"어떻게 더 쉽게 코드를 짤 수 있을까?\"를 고민했습니다. 고민 포인트를 공유하고 SVC 패턴의 탄생 배경과 다른 패턴들과의 차이를 비교하고, SVC를 통해서 스펙이 많아 복잡한 화면을 어떻게 나눠서 유지보수를 쉽게 할 수 있을지, RecyclerView에서 ViewModel활용법 등 노하우를 공유합니다."
   },
   {
     "type": 1,
-    "name": "박미륵",
-    "title": "Advanced MVP",
+    "name": "김범준",
+    "title": "ViewPager2 설레발 치기!",
     "time": "17:45",
-    "avatarUrl": "",
-    "contents": "추후 추가 예정"
+    "avatarUrl": "https://drive.google.com/open?id=1miEdK1RtxMcPgCqm9caPkkcd-WclmQ0p",
+    "contents": "아직 알파 단계인 ViewPager2에 대하여 이야기 하고자 합니다. 왜 ViewPager2가 나온 걸까요? 어떤 유용한 기능들이 추가 되었는지, 기존 ViewPager를 사용 할 때와 어떤 차이점들이 있는지등을 내부 구현 코드와 예시를 적절히 섞어 설명드리려 합니다."
   }
 ]

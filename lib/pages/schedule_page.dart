@@ -1,7 +1,10 @@
+import 'package:droidknights/models/schedule_service.dart';
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/pages/session_detail_dialog.dart';
+import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
-import 'package:droidknights/models/schedule_service.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:io' show Platform;
 
 class SchedulePage extends StatelessWidget {
   static final int ITEMVIEW_TYPE_NORMAL = 0;
@@ -9,58 +12,66 @@ class SchedulePage extends StatelessWidget {
 
   Widget scheduleAppbar() {
     return TabBar(
-      labelColor: Color(0xff40d225),
-      unselectedLabelColor: Colors.grey,
-      indicatorColor: Color(0xff40d225),
-      tabs: <Widget>[
-        Tab(text: "Track1"),
-        Tab(text: "Track2"),
-        Tab(text: "Track3"),
-      ]
+        labelColor: Color(0xff40d225),
+        unselectedLabelColor: Colors.grey,
+        indicatorColor: Color(0xff40d225),
+        tabs: <Widget>[
+          Tab(text: Strings.SCHEDULE_TAB_TRACK1),
+          Tab(text: Strings.SCHEDULE_TAB_TRACK2),
+          Tab(text: Strings.SCHEDULE_TAB_TRACK3),
+        ]
     );
   }
+
+  Widget androidAppBarTitle() => Image.asset(
+      Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
+      fit: BoxFit.fitHeight,
+      height: 25,
+    );
+
+  Widget iosAppBarTitle() =>
+      Text(
+          Strings.SCHEDULE_TAB_APPBAR_TITLE,
+          style: new TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.w600,
+          ),
+      );
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Image.asset(
-            'assets/images/dk_appbar_title.png',
-            fit: BoxFit.fitHeight,
-            height: 25,
-          ),
-          bottom: scheduleAppbar()
-        ),
-        body: TabBarView(
-          children: <Widget> [
-            trackScreen('assets/json/schedule_track1.json'),
-            trackScreen('assets/json/schedule_track2.json'),
-            trackScreen('assets/json/schedule_track3.json'),
-          ],
+        length: 3,
+        child: Scaffold(
+            appBar: AppBar(
+                centerTitle: true,
+                title: Platform.isAndroid ? androidAppBarTitle() : iosAppBarTitle(),
+                bottom: scheduleAppbar()),
+            body: TabBarView(
+              children: <Widget>[
+                trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN1),
+                trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN2),
+                trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN3),
+              ],
+            )
         )
-      )
     );
   }
 
   Widget trackScreen(String filePath) {
-
     return FutureBuilder(
-      future: loadSchedule(filePath),
-      builder: (BuildContext context,
-          AsyncSnapshot<List<ScheduleModel>> snapshot) {
-        if (!snapshot.hasData) return Container(color: Colors.black);
-        return Container(
-          color: Colors.black,
-          child: ListView.builder(
-            itemCount: snapshot.data.length,
-            itemBuilder: (context, i) =>
-              Column(children: <Widget>[_itemView(context, snapshot.data[i])])
-          ),
-        );
-      }
-     );
+        future: loadSchedule(filePath),
+        builder: (BuildContext context,
+            AsyncSnapshot<List<ScheduleModel>> snapshot) {
+          if (!snapshot.hasData) return Container(color: Colors.black);
+          return Container(
+            color: Colors.black,
+            child: ListView.builder(
+                itemCount: snapshot.data.length,
+                itemBuilder: (context, i) => Column(
+                    children: <Widget>[_itemView(context, snapshot.data[i])])),
+          );
+        });
   }
 
   Widget _itemView(context, data) {
@@ -101,10 +112,10 @@ class SchedulePage extends StatelessWidget {
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
               backgroundImage: data.avatarUrl == ""
-                  ? new Image.asset('assets/images/dk_profile.png').image
+                  ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
                   : new NetworkImage(
-                data.avatarUrl,
-              ),
+                      data.avatarUrl,
+                    ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
             Flexible(
@@ -122,8 +133,8 @@ class SchedulePage extends StatelessWidget {
                     ),
                     Text(
                       data.name,
-                      style: TextStyle(
-                          color: Color(0xffa5b495), fontSize: 12.0),
+                      style:
+                          TextStyle(color: Color(0xffa5b495), fontSize: 12.0),
                     ),
                   ],
                 ),
@@ -140,7 +151,8 @@ class SchedulePage extends StatelessWidget {
     return ListTile(
       leading: Text(
         data.time,
-        style: TextStyle(color: Theme.of(context).primaryColorLight, fontSize: 12.0),
+        style: TextStyle(
+            color: Theme.of(context).primaryColorLight, fontSize: 12.0),
       ),
       title: Text(
         data.title,
