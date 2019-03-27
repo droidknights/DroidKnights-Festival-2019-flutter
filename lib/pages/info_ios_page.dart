@@ -4,12 +4,13 @@ import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-class InfoPage extends StatefulWidget {
+
+class InfoIosPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => InfoPageState();
+  State<StatefulWidget> createState() => InfoIosPageState();
 }
 
-class InfoPageState extends State<InfoPage> {
+class InfoIosPageState extends State<InfoIosPage> {
   static const double _sectionAllPadding = 20.0;
   static const double _sectionTopPadding = 10.0;
   static const double _contentsAllPadding = 10.0;
@@ -56,16 +57,18 @@ class InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF112030),
-        centerTitle: true,
-        title: Image.asset(
-          Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
-          fit: BoxFit.fitHeight,
-          height: 25,
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF112030),
+          centerTitle: true,
+          title: new Text(
+            Strings.INFO_TAB_APPBAR_TITLE,
+            style: new TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ),
-      ),
-      body: _contentWidget(),
+        body: _contentWidget()
     );
   }
 
@@ -80,15 +83,17 @@ class InfoPageState extends State<InfoPage> {
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            imageBanner(),
-            mainTitle(Strings.INFO_TAB_MAIN_TITLE),
-            sectionTopPadding(),
+            //imageBanner(),
+            //mainTitle(Strings.INFO_TAB_MAIN_TITLE),
+            //sectionTopPadding(),
             sectionTitle(Strings.INFO_TAB_SECTION_TITLE_DROID_KNIGHTS),
-            sectionSubTitle(Strings.INFO_TAB_SECTION_SUB_TITLE_INTRO),
+            //sectionSubTitle(Strings.INFO_TAB_SECTION_SUB_TITLE_INTRO),
             goToHomepage(),
             sectionTopPadding(),
             sectionTitle(Strings.INFO_TAB_SECTION_TITLE_PROGRAM),
             sectionSubTitle(Strings.INFO_TAB_SECTION_SUB_TITLE_INTRO2),
+            sectionTopPadding(),
+            programImage(),
             programList(),
             sectionTopPadding(),
             sectionTitle(Strings.INFO_TAB_SECTION_TITLE_LOCATION),
@@ -101,6 +106,11 @@ class InfoPageState extends State<InfoPage> {
       )
     );
   }
+
+  Widget programImage() => new Image.asset(
+    Strings.INFO_TAB_PROGRAM_IMG,
+    fit: BoxFit.fitWidth,
+  );
 
   Widget imageBanner() => new Stack(children: <Widget>[
     new Image.asset(
@@ -118,11 +128,11 @@ class InfoPageState extends State<InfoPage> {
   Widget mainTitle(String title) => new Text(
     title,
     style: new TextStyle(
-      fontSize: 24.0,
-      color: const Color(0xFFFFFFFF),
-      fontWeight: FontWeight.w600,
-      height: 1.2,
-      fontFamily: Strings.FONT_DUNG_GEUN_MO),
+        fontSize: 24.0,
+        color: const Color(0xFFFFFFFF),
+        fontWeight: FontWeight.w600,
+        height: 1.2,
+        fontFamily: Strings.FONT_DUNG_GEUN_MO),
   );
 
   Widget sectionTitle(String title) => new Text(title, style: _titleTextStyle,);
