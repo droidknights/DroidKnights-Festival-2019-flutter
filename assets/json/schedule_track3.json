@@ -20,7 +20,7 @@
     "name": "정승욱",
     "title": "동적 맵 프레임워크와 인터렉션 구현하기",
     "time": "10:10",
-    "avatarUrl": "",
+    "avatarUrl": "https://drive.google.com/open?id=1Dx1DMKmsArJC-UW4-lcn6pA5MmbKvwGC",
     "contents": "안드로이드에서 GoogleMap, MapBox, HereMap, Tmap 등을 앱 재실행 없이 실시간으로 동적으로 지원하기 위해 처리한 방법과 서로 다른 맵 프레임워크에서 동일한 맵 인터렉션을 독립적인 컴포넌트로 구현하는 방법을 공유하고자 합니다."
   },
   {
@@ -28,24 +28,24 @@
     "name": "Yusuke Konishi",
     "title": "Master of Android Theme (English)",
     "time": "11:10",
-    "avatarUrl": "",
+    "avatarUrl": "https://avatars0.githubusercontent.com/u/1269214?s=460&v=4",
     "contents": "Do you manage Android theme effectively? Do you set the view attributes in each styles or views instead of using Android theme?\nI'll talk about the attributes you can set in Android theme especially Material Components Library.\n\nAndroid 테마를 효과적으로 관리합니까? Android 테마를 사용하는 대신 각 스타일 또는보기에서보기 속성을 설정합니까?\nAndroid 테마, 특히 Material Components Library에서 설정할 수있는 속성에 대해 이야기하겠습니다."
   },
   {
     "type": 1,
     "name": "노현석",
-    "title": "MotionLayout 무릎까지 담궈보기",
+    "title": "MotionLayout 무릎까지 담가보기",
     "time": "11:55",
-    "avatarUrl": "",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/683256802704687104/QnjrPuLj_400x400.jpg",
     "contents": "Google I/O '18에서 소개된 MotionLayout에 대해서 알아봅니다. MotionLayout의 소개, 컴포넌트 정의를 소개하며 샘플 예제를 통해 어떻게 모션 레이아웃을 적용할지 소개할 예정입니다."
   },
   {
     "type": 1,
     "name": "장인수",
-    "title": "Flutter Native Module Bady Step",
+    "title": "communication between flutter and native modules baby step",
     "time": "12:55",
-    "avatarUrl": "",
-    "contents": "Flutter의 전반적인 설명 후 Flutter 와 Native Module 간의 통신 개발하는 방법을 Baby Step 으로 소개 하고자 합니다."
+    "avatarUrl": "https://drive.google.com/file/d/1JNv9JAdUMIEYhkJH3sfm5OHl4V6YjWfw/view?usp=sharing",
+    "contents": "Flutter의 전반적인 설명 후 Flutter 와 Native Module 간의 통신 개발하는 방법을 Baby Step 으로 소개 하고자 합니다. "
   },
   {
     "type": 0,
@@ -58,33 +58,33 @@
   {
     "type": 1,
     "name": "양찬석",
-    "title": "구글 플레이의 다이나믹 딜리버리 (APK는 이제 안녕)",
+    "title": "구글 플레이 다이나믹 딜리버리 - APK는 이제 안녕~",
     "time": "15:00",
-    "avatarUrl": "",
-    "contents": "1. 왜 다이나믹 딜리버리가 필요할까?\n2. 구글에 앱 사인 키를 알려주세요. \n3. 앱 번들 기능 소개 및 적용법\n4. 앱 번들 효과적으로 테스팅 하기\n5. 앱 번들 이 후 - 다이나믹 피쳐 모듈 소개\n6. 다이나믹 피쳐 모듈을 어떻게 활용할 수 있을까? (구현 및 UX)\n7. 좀 더 더 다이나믹하게 - 인스턴트 앱 기능 소개\n8. 인스턴트 앱 - Can / Can't do\n9. 앞으로 앱은 어떻게 배포되고 개발될까?"
+    "avatarUrl": "https://avatars1.githubusercontent.com/u/1445837?s=400&v=4",
+    "contents": "1. 왜 다이나믹 딜리버리가 필요할까?\n2. 구글에 앱 사인 키를 알려주세요.\n3. 앱 번들 기능 소개 및 적용법\n4. 앱 번들 효과적으로 테스팅 하기\n5. 앱 번들 이 후 - 다이나믹 피쳐 모듈 소개\n6. 다이나믹 피쳐 모듈을 어떻게 활용할 수 있을까? (구현 및 UX)\n7. 앞으로 앱은 어떻게 배포되고 개발될까?"
   },
   {
     "type": 1,
     "name": "안명욱",
-    "title": "Window 다루는 방법",
+    "title": "안드로이드 윈도우 마스터 되기",
     "time": "16:00",
-    "avatarUrl": "",
-    "contents": "Android의 Window와 WindowInsets에 대해서 알아봅니다. System UI 영역에 우리 앱을 draw하거나 풀스크린 모드로 화면을 구성 할 때, Display Cutout 대응 등 WindowInset이 활용되는 경우와 주의해야 할 점들에 대해 알아봅니다. Google 개발자 Chris Banes가 발표한 Becoming a master window fitters(Droidcon NYC 2017)를 기반으로 준비하였으며, 최신사항을 반영하였습니다."
+    "avatarUrl": "https://scontent.ficn1-1.fna.fbcdn.net/v/t1.0-9/53324220_2161482243910239_8670930524082012160_n.jpg?_nc_cat=102&_nc_ht=scontent.ficn1-1.fna&oh=f95166793eb1a7e3ad4837f3c0216b96&oe=5CDCA40D",
+    "contents": "System UI 영역에 앱을 draw하거나 풀스크린 모드로 화면을 구성 할 때 Display Cutout 대응 등 WindowInset이 활용되는 경우와 주의해야 할 점들에 대해 알아봅니다.\n구글 개발자 Chris Banes가 Droidcon NYC 2017에서 발표한 Becoming a master window fitters를 기반으로 준비하였으며 최신사항을 반영하였습니다."
   },
   {
     "type": 1,
     "name": "차영호",
     "title": "Android Gradle Plugin 버그 잡기",
     "time": "16:45",
-    "avatarUrl": "",
+    "avatarUrl": "https://www.facebook.com/photo.php?fbid=1713043895411121&set=t.1379763942&type=3&theater",
     "contents": "* AOSP Ecosystem 소개\n* Andorid Gradle Plugin(AGP) 간단 소개\n* 적절한 AGP 브랜치/태그 찾기\n* AGP를 직접 빌드 및 설치\n* AGP의 task 구현 살펴보기\n* 찾은 버그를 AOSP issue tracker에 등록하기\n* 버그 수정을 AOSP gerrit에 등록하기\n* 후기 "
   },
   {
     "type": 1,
     "name": "신정아",
-    "title": "Tensorflow Lite 부터 MLKit, Mobile GPU 활용까지",
+    "title": "Tensorflow Lite 부터 ML Kit, Mobile GPU 활용 까지",
     "time": "17:45",
-    "avatarUrl": "",
+    "avatarUrl": "http://jeongahri.azurewebsites.net/img/profile.jpeg",
     "contents": "안드로이드 환경에서의 Tensorflow Lite, ML Kit 활용법과 경험기를 공유합니다. 딥러닝 비전 모델 데모와 함께 더 나은 안드로이드 모바일 머신러닝 환경을 갖추기 위한 프리셋을 알아보고, Tensorflow Lite에서 새로 지원되는 기능인 Mobile GPU의 활용 까지 살펴봅니다."
   }
 ]
