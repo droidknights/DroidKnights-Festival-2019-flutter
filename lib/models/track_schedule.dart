@@ -14,22 +14,39 @@ class ScheduleListModel{
 }
 class ScheduleModel{
   final int type;
-  final String name;
   final String title;
   final String time;
-  final String avatarUrl;
+  final List<SpeakerModel> speakers;
   final String contents;
 
-  ScheduleModel({this.type, this.name, this.title, this.time, this.avatarUrl, this.contents});
+  List<String> get names => speakers.map((speaker) => speaker.name).toList();
+  List<String> get avatarUrls => speakers.map((speaker) => speaker.avatarUrl).toList();
+
+  ScheduleModel({this.type, this.title, this.time, this.speakers, this.contents});
 
   factory ScheduleModel.fromJson(Map<String, dynamic> parsedJson){
+    final List<SpeakerModel> speakers = (parsedJson['speakers'] as List)
+        ?.map((e) => e == null ? null : SpeakerModel.fromJson(e as Map<String, dynamic>))
+        ?.toList() ?? [];
     return ScheduleModel(
         type: parsedJson['type'],
-        name: parsedJson['name'],
         title: parsedJson['title'],
         time: parsedJson ['time'],
-        avatarUrl: parsedJson['avatarUrl'],
+        speakers: speakers,
         contents: parsedJson ['contents']
+    );
+  }
+}
+class SpeakerModel{
+  final String name;
+  final String avatarUrl;
+
+  SpeakerModel({this.name, this.avatarUrl});
+
+  factory SpeakerModel.fromJson(Map<String, dynamic> parsedJson) {
+    return SpeakerModel(
+      name: parsedJson['name'],
+      avatarUrl: parsedJson['avatarUrl'],
     );
   }
 }
