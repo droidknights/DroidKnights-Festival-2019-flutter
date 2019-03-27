@@ -111,10 +111,10 @@ class SchedulePage extends StatelessWidget {
               maxRadius: 28.0,
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
-              backgroundImage: data.avatarUrl == ""
+              backgroundImage: data.avatarUrls.first == ""
                   ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
                   : new NetworkImage(
-                      data.avatarUrl,
+                      data.avatarUrls.first,
                     ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
@@ -132,7 +132,7 @@ class SchedulePage extends StatelessWidget {
                       style: TextStyle(fontSize: 16.0),
                     ),
                     Text(
-                      data.name,
+                      data.names.join(", "),
                       style:
                           TextStyle(color: Color(0xffa5b495), fontSize: 12.0),
                     ),

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
@@ -102,7 +104,7 @@ class SessionDetailDialog extends ModalRoute<void> {
                                 style: new TextStyle(fontSize: 16.0),
                               )),
                           new Text(
-                            sessionData.name,
+                            sessionData.names.join(", "),
                             style: new TextStyle(
                                 color: new Color(0xffa5b495), fontSize: 16.0),
                           ),
@@ -151,35 +153,45 @@ class SessionDetailDialog extends ModalRoute<void> {
   Widget get profileImage {
     return new Hero(
       tag: sessionData,
-      child: new Container(
-        height: avatarSize,
-        width: avatarSize,
-        constraints: new BoxConstraints(),
-        decoration: new BoxDecoration(
-          shape: BoxShape.circle,
-          boxShadow: [
-            const BoxShadow(
-                offset: const Offset(1.0, 2.0),
-                blurRadius: 2.0,
-                spreadRadius: -1.0,
-                color: const Color(0x33000000)),
-            const BoxShadow(
-                offset: const Offset(2.0, 1.0),
-                blurRadius: 3.0,
-                spreadRadius: 0.0,
-                color: const Color(0x24000000)),
-            const BoxShadow(
-                offset: const Offset(3.0, 1.0),
-                blurRadius: 4.0,
-                spreadRadius: 2.0,
-                color: const Color(0x1F000000)),
-          ],
-          image: new DecorationImage(
-            fit: BoxFit.cover,
-            image: (sessionData.avatarUrl ?? '') == ''
-                ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
-                : new NetworkImage(sessionData.avatarUrl ?? ''),
-          ),
+      child: Row(
+        children: sessionData.speakers
+            .sublist(0, min(sessionData.speakers.length, 2))
+            .map(avatarContainer)
+            .expand((w) => [w, Padding(padding: EdgeInsets.only(left: 8.0))])
+            .toList()..removeLast(),
+      )
+    );
+  }
+
+  Widget avatarContainer(SpeakerModel speaker) {
+    return Container(
+      height: avatarSize,
+      width: avatarSize,
+      constraints: new BoxConstraints(),
+      decoration: new BoxDecoration(
+        shape: BoxShape.circle,
+        boxShadow: [
+          const BoxShadow(
+              offset: const Offset(1.0, 2.0),
+              blurRadius: 2.0,
+              spreadRadius: -1.0,
+              color: const Color(0x33000000)),
+          const BoxShadow(
+              offset: const Offset(2.0, 1.0),
+              blurRadius: 3.0,
+              spreadRadius: 0.0,
+              color: const Color(0x24000000)),
+          const BoxShadow(
+              offset: const Offset(3.0, 1.0),
+              blurRadius: 4.0,
+              spreadRadius: 2.0,
+              color: const Color(0x1F000000)),
+        ],
+        image: new DecorationImage(
+          fit: BoxFit.cover,
+          image: (speaker.avatarUrl ?? '') == ''
+              ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
+              : new NetworkImage(speaker.avatarUrl ?? ''),
         ),
       ),
     );
