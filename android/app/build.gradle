@@ -56,10 +56,10 @@ android {
 
         }
         release {
-            keyAlias keystoreProperties['keyAlias']
+            /*keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
             storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
+            storePassword keystoreProperties['storePassword']*/
         }
     }
 
@@ -68,11 +68,11 @@ android {
 
         }
         release {
-            minifyEnabled true
+            /*minifyEnabled true
             useProguard true
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.release*/
         }
     }
 }
