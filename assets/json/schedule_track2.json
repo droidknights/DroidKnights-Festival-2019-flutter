@@ -44,7 +44,7 @@
     "speakers": [
       {
         "name": "남상균",
-        "avatarUrl": ""
+        "avatarUrl": "https://drive.google.com/file/d/1kd5IFqkWEoUOCOVJep0Y30tQjokzvh-U/view?usp=sharing"
       }
     ],
     "contents": "코틀린은 언어 자체에서 디자인 패턴을 효과적으로 반영할 수 있도록 설계되어 있습니다. 전통적인 GoF의 23가지 디자인 패턴이 코틀린에서 어떻게 적용될 수 있는지 살펴보고, 더 효율적인 코드를 작성하는 방법에 대해 이야기 합니다. 특히 각 패턴들이 자바로는 어떻게 구현되었는지 비교해 보며 코틀린 언어에 대한 이해도를 높이는 계기가 되었으면 합니다."
@@ -96,7 +96,7 @@
       },
       {
         "name": "유진의",
-        "avatarUrl": ""
+        "avatarUrl": "https://s3.ap-northeast-2.amazonaws.com/jinui/images/jinui.jpg"
       }
     ],
     "contents": "웹뷰를 포함한 앱이 어떻게 하면 사용자에게 더 빠른 속도로 좋은 경험을 전달할 수 있을까요? PWA와 함께 기존 웹뷰의 한계를 극복하고 사용자 경험을 한층 더 발전시킨 경험을 공유합니다."
