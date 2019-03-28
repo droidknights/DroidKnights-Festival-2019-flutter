@@ -3,7 +3,6 @@ import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/pages/session_detail_dialog.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:io' show Platform;
 
 class SchedulePage extends StatelessWidget {
@@ -115,15 +114,16 @@ class SchedulePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            CircleAvatar(
-              maxRadius: 28.0,
-              foregroundColor: Theme.of(context).primaryColor,
-              backgroundColor: Colors.grey,
-              backgroundImage: data.avatarUrls.first == ""
-                  ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
-                  : new NetworkImage(
-                      data.avatarUrls.first,
-                    ),
+            ClipOval(
+              child: FadeInImage.assetNetwork(
+                width: 56.0,
+                height: 56.0,
+                fadeInDuration: const Duration(seconds: 0),
+                fadeOutDuration: const Duration(seconds: 0),
+                image: data.avatarUrls.first,
+                placeholder: Platform.isAndroid ? Strings.IMAGES_DK_PROFILE : Strings.IMAGES_DK_IOS_PROFILE,
+                fit: BoxFit.fitHeight,
+              ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
             Flexible(

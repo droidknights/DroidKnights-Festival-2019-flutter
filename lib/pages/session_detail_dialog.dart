@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
+import 'dart:io' show Platform;
 
 class SessionDetailDialog extends ModalRoute<void> {
   final ScheduleModel sessionData;
@@ -164,36 +165,16 @@ class SessionDetailDialog extends ModalRoute<void> {
   }
 
   Widget avatarContainer(SpeakerModel speaker) {
-    return Container(
-      height: avatarSize,
-      width: avatarSize,
-      constraints: new BoxConstraints(),
-      decoration: new BoxDecoration(
-        shape: BoxShape.circle,
-        boxShadow: [
-          const BoxShadow(
-              offset: const Offset(1.0, 2.0),
-              blurRadius: 2.0,
-              spreadRadius: -1.0,
-              color: const Color(0x33000000)),
-          const BoxShadow(
-              offset: const Offset(2.0, 1.0),
-              blurRadius: 3.0,
-              spreadRadius: 0.0,
-              color: const Color(0x24000000)),
-          const BoxShadow(
-              offset: const Offset(3.0, 1.0),
-              blurRadius: 4.0,
-              spreadRadius: 2.0,
-              color: const Color(0x1F000000)),
-        ],
-        image: new DecorationImage(
-          fit: BoxFit.cover,
-          image: (speaker.avatarUrl ?? '') == ''
-              ? new Image.asset(Strings.IMAGES_DK_PROFILE).image
-              : new NetworkImage(speaker.avatarUrl ?? ''),
-        ),
-      ),
+    return ClipOval(
+        child: FadeInImage.assetNetwork(
+          width: avatarSize,
+          height: avatarSize,
+          fadeInDuration: const Duration(seconds: 0),
+          fadeOutDuration: const Duration(seconds: 0),
+          image: speaker.avatarUrl,
+          placeholder: Platform.isAndroid ? Strings.IMAGES_DK_PROFILE : Strings.IMAGES_DK_IOS_PROFILE,
+          fit: BoxFit.fitHeight,
+        )
     );
   }
 }
