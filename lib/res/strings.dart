@@ -2,6 +2,7 @@ class Strings {
 
   static const String DROID_KNIGHTS = "DroidKnights";
   static const String IMAGES_DK_PROFILE = "assets/images/dk_profile.png";
+  static const String IMAGES_DK_IOS_PROFILE = "assets/images/dk19_ios_appicon.png";
 
   // FONT
   static const String FONT_FAMILY_ROBOTO = "Roboto";
