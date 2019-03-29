@@ -17,8 +17,6 @@ class ScheduleLikeBloc implements BlocBase {
     init();
   }
 
-  //71f6ceba9d965fdf5421a3e701286647cc03cf1d
-
   void init() async {
     prefs = await SharedPreferences.getInstance();
     _map = json.decode(prefs.getString('dkf_schedule_like_map') ?? "{}");
