@@ -1,13 +1,16 @@
+import 'dart:io' show Platform;
+
+import 'package:droidknights/bloc/schedule_like_bloc.dart';
 import 'package:droidknights/models/schedule_service.dart';
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/pages/session_detail_dialog.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
-import 'dart:io' show Platform;
 
 class SchedulePage extends StatelessWidget {
   static final int ITEMVIEW_TYPE_NORMAL = 0;
   static final int ITEMVIEW_TYPE_SESSTION = 1;
+  final ScheduleLikeBloc _likeBloc = new ScheduleLikeBloc();
 
   Widget scheduleAppbar() {
     return SliverAppBar(
@@ -29,18 +32,17 @@ class SchedulePage extends StatelessWidget {
   }
 
   Widget androidAppBarTitle() => Image.asset(
-      Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
-      fit: BoxFit.fitHeight,
-      height: 25,
-    );
+        Strings.SCHEDULE_TAB_IMAGES_APP_BAR,
+        fit: BoxFit.fitHeight,
+        height: 25,
+      );
 
-  Widget iosAppBarTitle() =>
-      Text(
-          Strings.SCHEDULE_TAB_APPBAR_TITLE,
-          style: new TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.w600,
-          ),
+  Widget iosAppBarTitle() => Text(
+        Strings.SCHEDULE_TAB_APPBAR_TITLE,
+        style: new TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.w600,
+        ),
       );
 
   @override
@@ -49,9 +51,10 @@ class SchedulePage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           body: NestedScrollView(
-            headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => [
-              scheduleAppbar(),
-            ],
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) => [
+                      scheduleAppbar(),
+                    ],
             body: TabBarView(
               children: <Widget>[
                 trackScreen(Strings.SCHEDULE_TAB_JSON_TRACK_SCREEN1),
@@ -60,8 +63,7 @@ class SchedulePage extends StatelessWidget {
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 
   Widget trackScreen(String filePath) {
@@ -82,14 +84,24 @@ class SchedulePage extends StatelessWidget {
   }
 
   Widget _itemView(context, data) {
-    if (data.type == ITEMVIEW_TYPE_SESSTION) {
-      return _showItemSection(context, data);
-    } else {
-      return _showItemNormal(context, data);
-    }
+    return StreamBuilder(
+        stream: _likeBloc.$likeMap,
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) return Container();
+          return data.type == ITEMVIEW_TYPE_SESSTION
+              ? _showItemSection(
+                  context,
+                  data,
+                  snapshot.data[_likeBloc.toBase64(data.title + data.time)] ==
+                          null
+                      ? false
+                      : snapshot
+                          .data[_likeBloc.toBase64(data.title + data.time)])
+              : _showItemNormal(context, data);
+        });
   }
 
-  Widget _showItemSection(context, data) {
+  Widget _showItemSection(context, data, liked) {
     return ListTile(
       leading: Text(
         data.time,
@@ -121,12 +133,14 @@ class SchedulePage extends StatelessWidget {
                 fadeInDuration: const Duration(seconds: 0),
                 fadeOutDuration: const Duration(seconds: 0),
                 image: data.avatarUrls.first,
-                placeholder: Platform.isAndroid ? Strings.IMAGES_DK_PROFILE : Strings.IMAGES_DK_IOS_PROFILE,
+                placeholder: Platform.isAndroid
+                    ? Strings.IMAGES_DK_PROFILE
+                    : Strings.IMAGES_DK_IOS_PROFILE,
                 fit: BoxFit.fitHeight,
               ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
-            Flexible(
+            Expanded(
               child: Container(
                 constraints: BoxConstraints(minHeight: 60.0),
                 child: Column(
@@ -148,6 +162,13 @@ class SchedulePage extends StatelessWidget {
                 ),
               ),
             ),
+            IconButton(
+                icon: Icon(liked ? Icons.favorite : Icons.favorite_border),
+                onPressed: () {
+                  liked
+                      ? _likeBloc.removeLike(data.title + data.time)
+                      : _likeBloc.addLike(data.title + data.time);
+                })
           ],
         ),
       ),
