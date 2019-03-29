@@ -126,17 +126,22 @@ class SchedulePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            ClipOval(
-              child: FadeInImage.assetNetwork(
-                width: 56.0,
-                height: 56.0,
-                fadeInDuration: const Duration(seconds: 0),
-                fadeOutDuration: const Duration(seconds: 0),
-                image: data.avatarUrls.first,
-                placeholder: Platform.isAndroid
-                    ? Strings.IMAGES_DK_PROFILE
-                    : Strings.IMAGES_DK_IOS_PROFILE,
-                fit: BoxFit.fitHeight,
+            Container(
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: new Border.all(color: Colors.grey, width: 1)),
+              child: ClipOval(
+                child: FadeInImage.assetNetwork(
+                  width: 56.0,
+                  height: 56.0,
+                  fadeInDuration: const Duration(seconds: 0),
+                  fadeOutDuration: const Duration(seconds: 0),
+                  image: data.avatarUrls.first,
+                  placeholder: Platform.isAndroid
+                      ? Strings.IMAGES_DK_PROFILE
+                      : Strings.IMAGES_DK_IOS_PROFILE,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
