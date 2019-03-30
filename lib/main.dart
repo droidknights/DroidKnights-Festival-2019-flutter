@@ -4,15 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:droidknights/droidknightsapp_home.dart';
 import 'package:droidknights/res/strings.dart';
 
-import 'bloc/bloc_provider.dart';
-import 'bloc/tab_bloc.dart';
-
-void main() => runApp(
-  BlocProvider<TabBloc>(
-    bloc: TabBloc(),
-    child: MyApp()
-  )
-);
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
