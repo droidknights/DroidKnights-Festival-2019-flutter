@@ -19,7 +19,7 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome> {
 
   @override
   Widget build(BuildContext context) {
-    return Platform.isAndroid ? createAndroidWidget() : createIosWidget();
+    return createIosWidget();
   }
 
   Widget createAndroidWidget() {
@@ -71,6 +71,11 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome> {
     return CupertinoTabScaffold(
       backgroundColor: const Color(0xFF112030),
       tabBar: CupertinoTabBar(
+        onTap: (int index) => {
+          setState(() {
+            _index = index;
+          })
+        },
         backgroundColor: CupertinoColors.lightBackgroundGray,
         items: [
           BottomNavigationBarItem(
