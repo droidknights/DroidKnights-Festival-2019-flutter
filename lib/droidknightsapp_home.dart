@@ -19,7 +19,7 @@ class _DroidknightsAppHomeState extends State<DroidknightsAppHome> {
 
   @override
   Widget build(BuildContext context) {
-    return createIosWidget();
+    return Platform.isAndroid ? createAndroidWidget() : createIosWidget();
   }
 
   Widget createAndroidWidget() {
