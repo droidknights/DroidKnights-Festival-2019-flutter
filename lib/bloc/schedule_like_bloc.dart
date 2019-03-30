@@ -23,16 +23,18 @@ class ScheduleLikeBloc implements BlocBase {
     _likeMap.add(_map);
   }
 
-  Future addLike(String id) async {
+  Future<bool> addLike(String id) {
     _map[toBase64(id)] = true;
     _likeMap.add(_map);
-    await prefs.setString('dkf_schedule_like_map', json.encode(_map));
+    prefs.setString('dkf_schedule_like_map', json.encode(_map));
+    return prefs.commit();
   }
 
-  Future removeLike(String id) async {
+  Future<bool> removeLike(String id) {
     _map.remove(toBase64(id));
     _likeMap.add(_map);
-    await prefs.setString('dkf_schedule_like_map', json.encode(_map));
+    prefs.setString('dkf_schedule_like_map', json.encode(_map));
+    return prefs.commit();
   }
 
   @override
