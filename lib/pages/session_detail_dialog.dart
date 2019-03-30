@@ -165,7 +165,8 @@ class SessionDetailDialog extends ModalRoute<void> {
   }
 
   Widget avatarContainer(SpeakerModel speaker) {
-    return ClipOval(
+    return GestureDetector(
+      child: ClipOval(
         child: FadeInImage.assetNetwork(
           width: avatarSize,
           height: avatarSize,
@@ -175,6 +176,9 @@ class SessionDetailDialog extends ModalRoute<void> {
           placeholder: Platform.isAndroid ? Strings.IMAGES_DK_PROFILE : Strings.IMAGES_DK_IOS_PROFILE,
           fit: BoxFit.fitHeight,
         )
+      ),
+
+      onTap: () => {}
     );
   }
 }
