@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 import 'dart:math';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
@@ -168,15 +169,15 @@ class SessionDetailDialog extends ModalRoute<void> {
     return Container(
       decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
       child: ClipOval(
-          child: FadeInImage.assetNetwork(
+          child: FadeInImage(
         width: avatarSize,
         height: avatarSize,
         fadeInDuration: const Duration(seconds: 0),
         fadeOutDuration: const Duration(seconds: 0),
-        image: speaker.avatarUrl,
-        placeholder: Platform.isAndroid
+        image: CachedNetworkImageProvider(speaker.avatarUrl),
+        placeholder: AssetImage(Platform.isAndroid
             ? Strings.IMAGES_DK_PROFILE
-            : Strings.IMAGES_DK_IOS_PROFILE,
+            : Strings.IMAGES_DK_IOS_PROFILE),
         fit: BoxFit.fitHeight,
       )),
     );
