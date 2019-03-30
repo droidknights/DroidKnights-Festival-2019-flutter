@@ -1,18 +1,17 @@
-class ScheduleListModel{
+class ScheduleListModel {
   final List<ScheduleModel> list;
 
   ScheduleListModel({this.list});
 
   factory ScheduleListModel.fromJson(List<dynamic> parsedJson) {
     List<ScheduleModel> lists = new List<ScheduleModel>();
-    lists = parsedJson.map((i)=>ScheduleModel.fromJson(i)).toList();
+    lists = parsedJson.map((i) => ScheduleModel.fromJson(i)).toList();
 
-    return ScheduleListModel(
-        list: lists
-    );
+    return ScheduleListModel(list: lists);
   }
 }
-class ScheduleModel{
+
+class ScheduleModel {
   final int type;
   final String title;
   final String time;
@@ -20,24 +19,29 @@ class ScheduleModel{
   final String contents;
 
   List<String> get names => speakers.map((speaker) => speaker.name).toList();
-  List<String> get avatarUrls => speakers.map((speaker) => speaker.avatarUrl).toList();
+  List<String> get avatarUrls =>
+      speakers.map((speaker) => speaker.avatarUrl).toList();
 
-  ScheduleModel({this.type, this.title, this.time, this.speakers, this.contents});
+  ScheduleModel(
+      {this.type, this.title, this.time, this.speakers, this.contents});
 
-  factory ScheduleModel.fromJson(Map<String, dynamic> parsedJson){
+  factory ScheduleModel.fromJson(Map<String, dynamic> parsedJson) {
     final List<SpeakerModel> speakers = (parsedJson['speakers'] as List)
-        ?.map((e) => e == null ? null : SpeakerModel.fromJson(e as Map<String, dynamic>))
-        ?.toList() ?? [];
+            ?.map((e) => e == null
+                ? null
+                : SpeakerModel.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [];
     return ScheduleModel(
         type: parsedJson['type'],
         title: parsedJson['title'],
-        time: parsedJson ['time'],
+        time: parsedJson['time'],
         speakers: speakers,
-        contents: parsedJson ['contents']
-    );
+        contents: parsedJson['contents']);
   }
 }
-class SpeakerModel{
+
+class SpeakerModel {
   final String name;
   final String avatarUrl;
 
