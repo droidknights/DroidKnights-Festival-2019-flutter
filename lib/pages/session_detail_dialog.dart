@@ -168,13 +168,15 @@ class SessionDetailDialog extends ModalRoute<void> {
   Widget avatarContainer(SpeakerModel speaker) {
     return GestureDetector(
       child: ClipOval(
-        child: FadeInImage.assetNetwork(
+        child: FadeInImage(
           width: avatarSize,
           height: avatarSize,
           fadeInDuration: const Duration(seconds: 0),
           fadeOutDuration: const Duration(seconds: 0),
-          image: speaker.avatarUrl,
-          placeholder: Platform.isAndroid ? Strings.IMAGES_DK_PROFILE : Strings.IMAGES_DK_IOS_PROFILE,
+          image: CachedNetworkImageProvider(speaker.avatarUrl),
+          placeholder: AssetImage(Platform.isAndroid
+              ? Strings.IMAGES_DK_PROFILE
+              : Strings.IMAGES_DK_IOS_PROFILE),
           fit: BoxFit.fitHeight,
         )
       ),
