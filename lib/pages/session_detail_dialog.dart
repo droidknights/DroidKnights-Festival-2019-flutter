@@ -1,9 +1,10 @@
+import 'dart:io' show Platform;
 import 'dart:math';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:droidknights/models/track_schedule.dart';
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
-import 'dart:io' show Platform;
 
 class SessionDetailDialog extends ModalRoute<void> {
   final ScheduleModel sessionData;
@@ -153,15 +154,15 @@ class SessionDetailDialog extends ModalRoute<void> {
 
   Widget get profileImage {
     return new Hero(
-      tag: sessionData,
-      child: Row(
-        children: sessionData.speakers
-            .sublist(0, min(sessionData.speakers.length, 2))
-            .map(avatarContainer)
-            .expand((w) => [w, Padding(padding: EdgeInsets.only(left: 8.0))])
-            .toList()..removeLast(),
-      )
-    );
+        tag: sessionData,
+        child: Row(
+          children: sessionData.speakers
+              .sublist(0, min(sessionData.speakers.length, 2))
+              .map(avatarContainer)
+              .expand((w) => [w, Padding(padding: EdgeInsets.only(left: 8.0))])
+              .toList()
+                ..removeLast(),
+        ));
   }
 
   Widget avatarContainer(SpeakerModel speaker) {

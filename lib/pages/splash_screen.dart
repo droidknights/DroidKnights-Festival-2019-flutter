@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:math';
 
 import 'package:droidknights/const/route.dart';
@@ -7,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'dart:io' show Platform;
 
 const NUMBER_OF_STARS = 30;
+const ANIMATION_TIME_MILL = 2500;
 
 class SplashScreen extends StatefulWidget {
 
@@ -17,40 +17,33 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+
   List<Animation<double>> _animations;
   AnimationController _controller;
-  List<Map<String, num>> _topAndLefts;
+  List<Point<double>> _topAndLefts;
 
-  initState() {
-    try {
-      super.initState();
+  @override
+  void initState() {
+    super.initState();
 
-      Random random = new Random();
-      _topAndLefts = new List<int>.generate(NUMBER_OF_STARS, (int i) => i)
-          .map((int i) => random.nextInt(500))
-          .map((int left) => left.toDouble())
-          .map((double left) => [left, random.nextInt(1000)])
-          .map((size) => {'left': size[0], 'top': size[1] / 3.5})
-          .toList();
+    Random random = new Random();
+    _topAndLefts = new List<int>.generate(NUMBER_OF_STARS, (int i) => i)
+        .map((int i) => Point(random.nextInt(500).toDouble(), random.nextInt(1000) / 3.5))
+        .toList();
 
-      _initAnimation();
+    _initAnimation();
+  }
 
-      Timer(Duration(milliseconds: 2500), () async {
-        Navigator.pushReplacementNamed(context, Routes.HOME);
-      });
-    } catch (e) {
-      print(e.toString());
+  void animationListener(AnimationStatus status) {
+    if(status == AnimationStatus.completed) {
       Navigator.pushReplacementNamed(context, Routes.HOME);
     }
   }
 
-  dispose() {
-    _disposeAnimation();
-    super.dispose();
-  }
-
   void _initAnimation() {
-    _controller = AnimationController(duration: Duration(milliseconds: 2000), vsync: this);
+    _controller = AnimationController(duration: Duration(milliseconds: ANIMATION_TIME_MILL), vsync: this);
+
+    _controller.addStatusListener(animationListener);
 
     _animations = [
       makeTweenAnimation(controller: _controller, begin: 0.2, end: 0.6),
@@ -58,6 +51,12 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
     ];
 
     _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _disposeAnimation();
+    super.dispose();
   }
 
   void _disposeAnimation() {
@@ -122,8 +121,8 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
   List<Widget> _buildStars() =>
       _topAndLefts.map((topAndLeft) =>
           Positioned(
-            top: calculateAnimationValue(_animations[1], topAndLeft['top'] - 20, topAndLeft['top']),
-            left: topAndLeft['left'],
+            top: calculateAnimationValue(_animations[1], topAndLeft.y - 20, topAndLeft.y),
+            left: topAndLeft.x,
             child: Image.asset(
               'assets/images/dk19_appicon_star.png',
               width: 6,
