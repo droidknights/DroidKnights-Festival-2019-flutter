@@ -5,7 +5,7 @@
 본 앱은 마켓에서 다운받으실 수 있습니다.
 
 - [안드로이드](https://play.google.com/store/apps/details?id=com.droidknights.flutterdroidknights)
-- Apple - 준비중
+- Apple - [오픈 베타](https://testflight.apple.com/join/AMkdVFws)
 
 ## Feature
 
