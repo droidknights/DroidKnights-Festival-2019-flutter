@@ -42,7 +42,7 @@
     "speakers": [
       {
         "name": "하동현",
-        "avatarUrl": "https://drive.google.com/file/d/17XUDJDFep7JGtWq71wPPnYVzFU8VY1Gk/view?usp=sharing"
+        "avatarUrl": "https://drive.google.com/uc?export=view&id=17XUDJDFep7JGtWq71wPPnYVzFU8VY1Gk"
       }
     ],
     "contents": "한 화면에 다양한 UI가 존재하며 각 UI마다 복잡한 로직이 있으며, 처리하다 보면 엉키게 되어 유지보수를 하기 어렵게 됩니다.  RxBinding을 이용하면 손쉽게 중복코드를 처리하고 UI 이벤트를 조합하여 문제를 해결할 수 있습니다.  RxBinding의 기본 사용방법과 프로덕트에 적용한 경험을 다양한 예시와 함께 설명합니다."
@@ -66,7 +66,7 @@
     "speakers": [
       {
         "name": "박상권",
-        "avatarUrl": "https://www.dropbox.com/s/i5evo2188d40s28/1550711591729.png?dl=0"
+        "avatarUrl": "https://www.dropbox.com/s/i5evo2188d40s28/1550711591729.png?raw=1"
       }
     ],
     "contents": "- Kotlin이 공식언어로 지정된지 2년이 됐음에도 요즘 각종 안드로이드 커뮤니티에서 제일 많이 나오는 질문은 'Kotlin 꼭 해야하나요?' 입니다.\n- Java코드를 Kotlin코드로 코딩하기 시작하면서 느꼈던 Java코드와 Kotlin을 비교했을때의 특징과 장점들에 대해서 이야기 합니다.\n- Kotlin을 학습하려고 하는 분들을 위한 각종 팁들과 삽질경험들을 공유합니다."
@@ -85,7 +85,7 @@
     "speakers": [
       {
         "name": "강사룡",
-        "avatarUrl": "https://www.dropbox.com/s/cshhhpdo4b2kh5y/IMG_2975.png?dl=0"
+        "avatarUrl": "https://www.dropbox.com/s/cshhhpdo4b2kh5y/IMG_2975.png?raw=1"
       }
     ],
     "contents": "당신의 아키텍처, 뭔가 잘못된 것 같은 느낌에 시달리고 있지는 않나요? MVP부터 MVVM, Flux 그리고 클린 아키텍처까지 Best Practice를 중심으로 현업에서 어떤 아키텍처를 적용할 것인가에 대해, 그리고 아키텍처 관점에서 의존성 주입, Rx, 코루틴, 멀티모듈 등의 기술을 어떻게 적용할 수 있을지, 2018년에 이어 더욱 깊은 내용으로 다뤄봅니다."
@@ -97,7 +97,8 @@
     "speakers": [
       {
         "name": "권태환",
-        "avatarUrl": "https://photos.app.goo.gl/JMWyxaUz4RSwpppo9"
+        "originAvatarUrl": "https://photos.app.goo.gl/JMWyxaUz4RSwpppo9",
+        "avatarUrl": "https://lh3.googleusercontent.com/rPndEdMcqItGgFsrs50h6NkGmyxYutV5h2SCGkOUcQ2I03SfFHZTQQoIsb8TanrbzDy7JGHF1MTgq-3rRtQW3RZFIP86d4GMWwsW5n_cszPh1TSx4ABZmp-4q1fbq0Q_ASI5Otb1mdL2AkbXfth1JNuFElDXRffLy4kZpkD6gg61QNclhaGlAWoUs7ra_-R6Y8vLhmRVXCJ3Frcn4oinhMi_DvEiJRDBLkQyL7zZXCFrtJk39GPLP5XZ8lZpLp-Tk823EQreBYNPGd8fdS_3qLQoClgpFdOpFt8f26-LsE4DwOxEDDdqWQoHRJ3K6EpDpJJ7J1L60y7eZt6i-pBKQWMCGhmKe_eOPt_7MsuEppNSJnXY3BTno42a-guPpMjWGnz9QhdbjGd7UxOuc2sp34PIZZP43V4It7QvU6oRXuu_dqxXf7y16d0gJiLc3FZvixrj5yGSbYBPVkm9xFqoEmK4uBtr2vhGkIbtdkfmdh22nam_WaI3A1L-0fnqPKR3v01W_-WkMUybnk4owaoMQT-bPec_uek4J7sd-LEZe0zlWbBBivQodtNWg5jeYUQbSvICMTyVZV2PXwPIVsqEtEkf8RFInl8EZr-bUCoqUiwOTiQmQ6RyGpS7mTTXrWebqx_0bEV8AS_-9HdpyXhJ-et6qvO4FORus1tLDIERfB-yNLnokUO7apzKkGKIWEEYR5Iu8BRDVq0e9WwdxyS5ipdPvw=w1000-no-tmp.jpg"
       }
     ],
     "contents": "코루틴은 어렵지 않게 적용할 수 있다. 그러면 코루틴 내에서 발생하는 오류를 어떻게 캐치하고 안전하게 사용할 수 있을까? 코루틴 내에서 발생하는 오류를 안전하게 처리하는 방법을 소개하고, 코루틴으로 라이브러리 형태로 접근 하는 방법을 소개하려고 한다.\n- 코루틴 소개\n- 코루틴 사용 중 발생하는 오류 처리 방법을 알아본다\n- 코루틴 라이브러리를 직접 만들고 활용해보는 방법을 알아본다\n- 실제 적용 사례를 함께 소개한다"
@@ -109,7 +110,7 @@
     "speakers": [
       {
         "name": "정현지",
-        "avatarUrl": "https://drive.google.com/file/d/1UnMNRAy81WFIuLP5-65X0LEaXIHufeda/view?usp=sharing"
+        "avatarUrl": "https://drive.google.com/uc?export=view&id=1UnMNRAy81WFIuLP5-65X0LEaXIHufeda"
       }
     ],
     "contents": "1. DI란 무엇일까?\n2. Dagger란 무엇일까 ?\n3. Koin란 무엇일까 ?\n4. 기본적인 두개의 기술에 대한 예시를 들면서 공통점과 차이점은 무엇일까?\n5. 본론\n- 둘의 차이점 비교\n- DI 를 적용했을 때 장단점은?\n- DI를 공부하고 이렇게 적용하면서 우리가 얻고자 하는 것은?"

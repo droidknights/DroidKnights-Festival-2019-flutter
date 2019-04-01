@@ -20,7 +20,7 @@
     "speakers": [
       {
         "name": "정승욱",
-        "avatarUrl": "https://drive.google.com/open?id=1Dx1DMKmsArJC-UW4-lcn6pA5MmbKvwGC"
+        "avatarUrl": "https://drive.google.com/uc?export=view&id=1Dx1DMKmsArJC-UW4-lcn6pA5MmbKvwGC"
       }
     ],
     "contents": "안드로이드에서 GoogleMap, MapBox, HereMap, Tmap 등을 앱 재실행 없이 실시간으로 동적으로 지원하기 위해 처리한 방법과 서로 다른 맵 프레임워크에서 동일한 맵 인터렉션을 독립적인 컴포넌트로 구현하는 방법을 공유하고자 합니다."
@@ -56,7 +56,7 @@
     "speakers": [
       {
         "name": "장인수",
-        "avatarUrl": "https://drive.google.com/file/d/1JNv9JAdUMIEYhkJH3sfm5OHl4V6YjWfw/view?usp=sharing"
+        "avatarUrl": "https://drive.google.com/uc?export=view&id=1JNv9JAdUMIEYhkJH3sfm5OHl4V6YjWfw"
       }
     ],
     "contents": "Flutter의 전반적인 설명 후 Flutter 와 Native Module 간의 통신 개발하는 방법을 Baby Step 으로 소개 하고자 합니다. "
