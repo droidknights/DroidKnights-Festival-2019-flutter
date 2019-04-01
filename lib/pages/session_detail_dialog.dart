@@ -166,20 +166,22 @@ class SessionDetailDialog extends ModalRoute<void> {
   }
 
   Widget avatarContainer(SpeakerModel speaker) {
-    return Container(
-      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+    return GestureDetector(
       child: ClipOval(
-          child: FadeInImage(
-        width: avatarSize,
-        height: avatarSize,
-        fadeInDuration: const Duration(seconds: 0),
-        fadeOutDuration: const Duration(seconds: 0),
-        image: CachedNetworkImageProvider(speaker.avatarUrl),
-        placeholder: AssetImage(Platform.isAndroid
-            ? Strings.IMAGES_DK_PROFILE
-            : Strings.IMAGES_DK_IOS_PROFILE),
-        fit: BoxFit.fitHeight,
-      )),
+        child: FadeInImage(
+          width: avatarSize,
+          height: avatarSize,
+          fadeInDuration: const Duration(seconds: 0),
+          fadeOutDuration: const Duration(seconds: 0),
+          image: CachedNetworkImageProvider(speaker.avatarUrl),
+          placeholder: AssetImage(Platform.isAndroid
+              ? Strings.IMAGES_DK_PROFILE
+              : Strings.IMAGES_DK_IOS_PROFILE),
+          fit: BoxFit.fitHeight,
+        )
+      ),
+
+      onTap: () => {}
     );
   }
 }
