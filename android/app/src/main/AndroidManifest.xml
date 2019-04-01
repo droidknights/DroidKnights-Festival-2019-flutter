@@ -19,7 +19,7 @@
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data
           android:name="com.google.android.geo.API_KEY"
-          android:value="AIzaSyD5W3yb4jxvq7fjVl-QUOc_f2zSSZ9SWwU" />
+          android:value="${mapApiKey}" />
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:droidknights/res/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 class InfoPage extends StatefulWidget {
@@ -25,7 +27,7 @@ class InfoPageState extends State<InfoPage> {
   static Marker marker = Marker(
     markerId: markerId,
     position: LatLng(37.513212, 127.058595),
-    infoWindow: InfoWindow(title: Strings.INFO_TAB_MAKER, snippet: '*'),
+    infoWindow: InfoWindow(title: Strings.INFO_TAB_MAKER, snippet: Strings.INFO_TAB_SNIPPET),
   );
 
   Map<MarkerId, Marker> markers = <MarkerId, Marker>{
@@ -213,6 +215,11 @@ class InfoPageState extends State<InfoPage> {
         _controller.complete(controller);
       },
       markers: Set<Marker>.of(markers.values),
+      gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>[
+        Factory<OneSequenceGestureRecognizer>(
+              () => EagerGestureRecognizer(),
+        ),
+      ].toSet(),
     ),
   );
 

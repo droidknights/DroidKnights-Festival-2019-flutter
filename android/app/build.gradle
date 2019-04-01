@@ -27,6 +27,11 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+def mapApiKey = localProperties.getProperty('mapApiKey')
+if (mapApiKey == null) {
+    mapApiKey = ''
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
@@ -52,6 +57,10 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    defaultConfig {
+        manifestPlaceholders = [mapApiKey: "$mapApiKey"]
     }
 
     signingConfigs {
