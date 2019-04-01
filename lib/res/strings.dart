@@ -10,7 +10,8 @@ class Strings {
 
   // INFO TAB
   static const String INFO_TAB = "Information";
-  static const String INFO_TAB_MAKER = "coex";
+  static const String INFO_TAB_MAKER = "코엑스";
+  static const String INFO_TAB_SNIPPET = "3F E홀";
   static const String INFO_TAB_MOVE_HOMEPAGE = "홈페이지로 이동";
   static const String INFO_TAB_URL_DROID_KNIGHTS = "https://droidknights.github.io/2019/";
   static const String INFO_TAB_MAIN_TITLE = "오직 안드로이드 개발자들을 위한 컨퍼런스! 드로이드나이츠 2019";

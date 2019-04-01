@@ -25,7 +25,7 @@ class InfoPageState extends State<InfoPage> {
   static Marker marker = Marker(
     markerId: markerId,
     position: LatLng(37.513212, 127.058595),
-    infoWindow: InfoWindow(title: Strings.INFO_TAB_MAKER, snippet: '*'),
+    infoWindow: InfoWindow(title: Strings.INFO_TAB_MAKER, snippet: Strings.INFO_TAB_SNIPPET),
   );
 
   Map<MarkerId, Marker> markers = <MarkerId, Marker>{
