@@ -27,13 +27,13 @@ class Strings {
 
   static const String INFO_TAB_PROGRAM_IMG = "assets/images/dk_program.png";
 
-  static const String INFO_TAB_TITLE_CODE_REVIEW = "코드리뷰";
+  static const String INFO_TAB_TITLE_CODE_REVIEW = "코드리뷰 (15:00 ~ 14:30)";
   static const String INFO_TAB_TITLE_CODE_REVIEW_CONTENT = "나의 코드를 간략히 소개하고,\n다른 개발자들에게 리뷰를 받습니다.\n리뷰 과정 참관도 가능합니다.";
-  static const String INFO_TAB_TITLE_CODE_LAB = "코드랩";
+  static const String INFO_TAB_TITLE_CODE_LAB = "코드랩 (10:30 ~ 13:25)";
   static const String INFO_TAB_TITLE_CODE_LAB_CONTENT = "4가지 flutter 튜토리얼 코드를\n각자 학습하며, 궁금한 부분이 생기면\n도움을 요청할 수 있습니다. (노트북 지참)";
   static const String INFO_TAB_TITLE_LIVE_QUIZ = "실시간 퀴즈쇼";
   static const String INFO_TAB_TITLE_LIVE_QUIZ_CONTENT = "당신의 개발력을 뽐내보세요!\n푸짐한 상품이 함께합니다.";
-  static const String INFO_TAB_TITLE_LIGHTENING_TALK = "라이트닝 토크";
+  static const String INFO_TAB_TITLE_LIGHTENING_TALK = "라이트닝 토크 (16:45 ~ 17:30)";
   static const String INFO_TAB_TITLE_LIGHTENING_TALK_CONTENT = "일상적인 업무 속에서 성장하기위한\n노력을 공유하고, 함께 방법을 찾아갑니다.\n4인의 발표 후 주제별로 그룹지어 이야기를 나눕니다.";
 
   static const String INFO_TAB_IMAGES_PATH_DK_MAIN_GRAPHIC = "assets/images/dk_main_graphic.png";
