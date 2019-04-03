@@ -92,6 +92,7 @@ class SessionDetailDialog extends ModalRoute<void> {
                           top: avatarHalfSize,
                           bottom: avatarHalfSize),
                       child: new Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           new Padding(
@@ -105,10 +106,17 @@ class SessionDetailDialog extends ModalRoute<void> {
                                 textAlign: TextAlign.center,
                                 style: new TextStyle(fontSize: 16.0),
                               )),
-                          new Text(
-                            sessionData.names.join(", "),
-                            style: new TextStyle(
-                                color: new Color(0xffa5b495), fontSize: 16.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              new Text(
+                                sessionData.names.join(", "),
+                                style: new TextStyle(
+                                    color: new Color(0xffa5b495), fontSize: 16.0),
+                              ),
+                              sessionData.tag ? _setTag() : Container(),
+                            ],
                           ),
                           new Padding(
                               padding: const EdgeInsets.symmetric(
@@ -133,6 +141,17 @@ class SessionDetailDialog extends ModalRoute<void> {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _setTag() {
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Text(
+        Strings.SCHEDULE_ITEM_BEGINNER_TAG,
+        style:
+        TextStyle(color: Color(0xff40d225), fontSize: 12.0),
+      ),
     );
   }
 
