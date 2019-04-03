@@ -1,13 +1,15 @@
 [
   {
     "type": 0,
-    "title": "등록",
-    "time": "9:00",
+    "tag": false,
+    "title": "E5",
+    "time": "장소",
     "speakers": [],
     "contents": ""
   },
   {
     "type": 0,
+    "tag": false,
     "title": "키노트",
     "time": "9:50",
     "speakers": [],
@@ -15,6 +17,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "Android TDD 적용기",
     "time": "10:10",
     "speakers": [
@@ -27,6 +30,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "Android Project with Multiple Modules",
     "time": "11:10",
     "speakers": [
@@ -39,6 +43,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "코틀린 디자인 패턴",
     "time": "11:55",
     "speakers": [
@@ -51,6 +56,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "오프라인과 앱 서비스",
     "time": "12:55",
     "speakers": [
@@ -64,6 +70,7 @@
   },
   {
     "type": 0,
+    "tag": false,
     "title": "점심시간",
     "time": "13:25 \n~ 15:00",
     "speakers": [
@@ -76,6 +83,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "코루틴 너 은행에서 뭐하니?",
     "time": "15:00",
     "speakers": [
@@ -88,6 +96,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "PWA 를 이용한 안드로이드 웹뷰 성능 개선기",
     "time": "16:00",
     "speakers": [
@@ -104,6 +113,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "SVC 패턴으로 앱 쉽게 만들기",
     "time": "16:45",
     "speakers": [
@@ -116,8 +126,9 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "ViewPager2 설레발 치기!",
-    "time": "17:45",
+    "time": "17:30",
     "speakers": [
       {
         "name": "김범준",

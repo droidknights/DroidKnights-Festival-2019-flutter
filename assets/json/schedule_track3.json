@@ -1,13 +1,15 @@
 [
   {
     "type": 0,
-    "title": "등록",
-    "time": "9:00",
+    "tag": false,
+    "title": "E6",
+    "time": "장소",
     "speakers": [],
     "contents": ""
   },
   {
     "type": 0,
+    "tag": false,
     "title": "키노트",
     "time": "9:50",
     "speakers": [],
@@ -15,6 +17,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "동적 맵 프레임워크와 인터렉션 구현하기",
     "time": "10:10",
     "speakers": [
@@ -27,6 +30,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "Master of Android Theme (English)",
     "time": "11:10",
     "speakers": [
@@ -39,6 +43,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "MotionLayout 무릎까지 담가보기",
     "time": "11:55",
     "speakers": [
@@ -51,6 +56,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "communication between flutter and native modules baby step",
     "time": "12:55",
     "speakers": [
@@ -63,6 +69,7 @@
   },
   {
     "type": 0,
+    "tag": false,
     "title": "점심시간",
     "time": "13:25 \n~ 15:00",
     "speakers": [],
@@ -70,6 +77,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "구글 플레이 다이나믹 딜리버리 - APK는 이제 안녕~",
     "time": "15:00",
     "speakers": [
@@ -82,6 +90,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "안드로이드 윈도우 마스터 되기",
     "time": "16:00",
     "speakers": [
@@ -94,6 +103,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "Android Gradle Plugin 버그 잡기",
     "time": "16:45",
     "speakers": [
@@ -106,8 +116,9 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "Tensorflow Lite 부터 ML Kit, Mobile GPU 활용 까지",
-    "time": "17:45",
+    "time": "17:30",
     "speakers": [
       {
         "name": "신정아",

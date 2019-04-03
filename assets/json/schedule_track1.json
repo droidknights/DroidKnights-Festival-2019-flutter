@@ -1,8 +1,9 @@
 [
   {
     "type": 0,
-    "title": "등록",
-    "time": "9:00",
+    "tag": false,
+    "title": "E2,3,4",
+    "time": "장소",
     "speakers": [
       {
         "name": "",
@@ -13,6 +14,7 @@
   },
   {
     "type": 0,
+    "tag": false,
     "title": "키노트",
     "time": "9:50",
     "speakers": [
@@ -25,6 +27,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "RxJava 구독과 구독 제거 메커니즘 설명",
     "time": "10:10",
     "speakers": [
@@ -37,6 +40,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "지금까지 이런 간단한 Logic 처리는 없었다 이것은 Rx 인가, UI 이벤트인가? 네, RxBinding입니다.",
     "time": "11:10",
     "speakers": [
@@ -49,6 +53,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "Clean Architecture (in Android) Revised",
     "time": "11:55",
     "speakers": [
@@ -61,6 +66,7 @@
   },
   {
     "type": 1,
+    "tag": true,
     "title": "Kotlin 꼭 해야하나요?",
     "time": "12:55",
     "speakers": [
@@ -73,6 +79,7 @@
   },
   {
     "type": 0,
+    "tag": false,
     "title": "점심 시간",
     "time": "13:25 \n~ 15:00",
     "speakers": [],
@@ -80,6 +87,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "안드로이드 아키텍처 총정리",
     "time": "15:00",
     "speakers": [
@@ -92,6 +100,7 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?",
     "time": "16:00",
     "speakers": [
@@ -105,7 +114,8 @@
   },
   {
     "type": 1,
-    "title": "Dagger vs Koin 무엇이 좋을까요?",
+    "tag": true,
+    "title": "Dagger2와 Koin 소개 - 어떻게 쓰는 걸까요?",
     "time": "16:45",
     "speakers": [
       {
@@ -117,8 +127,9 @@
   },
   {
     "type": 1,
+    "tag": false,
     "title": "Advanced MVP",
-    "time": "17:45",
+    "time": "17:30",
     "speakers": [
       {
         "name": "박미륵",
