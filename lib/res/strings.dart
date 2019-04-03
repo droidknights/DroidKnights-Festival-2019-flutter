@@ -42,7 +42,7 @@ class Strings {
   static const String INFO_TAB_URL_SPONSOR_LINE = "https://linepluscorp.com/";
   static const String INFO_TAB_URL_IMAGE_SPONSOR_LINE = "https://droidknights.github.io/2019/static/media/banner.76bec31e.png";
   static const String INFO_TAB_URL_SPONSOR_PRD = "https://prnd.co.kr/";
-  static const String INFO_TAB_URL_IMAGE_SPONSOR_PRD = "https://droidknights.github.io/2019/static/media/banner.f738a7e3.png";
+  static const String INFO_TAB_URL_IMAGE_SPONSOR_PRD = "https://droidknights.github.io/2019/static/media/banner.fa39ae88.png";
   static const String INFO_TAB_URL_SPONSOR_JETBRAINS = "https://www.jetbrains.com/";
   static const String INFO_TAB_URL_IMAGE_SPONSOR_JETBRAINS = "https://droidknights.github.io/2019/static/media/banner.0ddeb0f4.png";
   static const String INFO_TAB_URL_SPONSOR_HYPERCONNECT = "https://hyperconnect.com/";
