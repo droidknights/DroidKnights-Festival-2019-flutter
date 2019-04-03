@@ -13,6 +13,7 @@ class ScheduleListModel {
 
 class ScheduleModel {
   final int type;
+  final bool tag;
   final String title;
   final String time;
   final List<SpeakerModel> speakers;
@@ -23,7 +24,7 @@ class ScheduleModel {
       speakers.map((speaker) => speaker.avatarUrl).toList();
 
   ScheduleModel(
-      {this.type, this.title, this.time, this.speakers, this.contents});
+      {this.type, this.tag, this.title, this.time, this.speakers, this.contents});
 
   factory ScheduleModel.fromJson(Map<String, dynamic> parsedJson) {
     final List<SpeakerModel> speakers = (parsedJson['speakers'] as List)
@@ -34,6 +35,7 @@ class ScheduleModel {
         [];
     return ScheduleModel(
         type: parsedJson['type'],
+        tag: parsedJson['tag'],
         title: parsedJson['title'],
         time: parsedJson['time'],
         speakers: speakers,

@@ -159,10 +159,15 @@ class SchedulePage extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 16.0),
                     ),
-                    Text(
-                      data.names.join(", "),
-                      style:
+                    Row(
+                      children: <Widget>[
+                        Text(
+                          data.names.join(", "),
+                          style:
                           TextStyle(color: Color(0xffa5b495), fontSize: 12.0),
+                        ),
+                        data.tag ?_setTag() : Container(),
+                      ],
                     ),
                   ],
                 ),
@@ -179,6 +184,17 @@ class SchedulePage extends StatelessWidget {
         ),
       ),
       onTap: () => showDetailPage(context, data),
+    );
+  }
+
+  Widget _setTag() {
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Text(
+        Strings.SCHEDULE_ITEM_BEGINNER_TAG,
+        style:
+        TextStyle(color: Color(0xff40d225), fontSize: 10.0),
+      ),
     );
   }
 

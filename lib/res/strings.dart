@@ -64,6 +64,8 @@ class Strings {
   static const String SCHEDULE_TAB_TRACK2 = "Track2";
   static const String SCHEDULE_TAB_TRACK3 = "Track3";
 
+  static const String SCHEDULE_ITEM_BEGINNER_TAG = "FOR BEGINNER";
+
   static const String SCHEDULE_TAB_IMAGES_APP_BAR = "assets/images/dk_appbar_title.png";
   static const String SCHEDULE_TAB_JSON_TRACK_SCREEN1 = "assets/json/schedule_track1.json";
   static const String SCHEDULE_TAB_JSON_TRACK_SCREEN2 = "assets/json/schedule_track2.json";
